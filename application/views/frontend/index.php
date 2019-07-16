@@ -3,7 +3,7 @@
 
 
 <head>
-	<title>the box - Index</title>
+	<title>Pemesanan</title>
 	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 	<meta content="utf-8" http-equiv="encoding">
 	<meta name="keywords" content="Template, html, premium, themeforest" />
