@@ -53,6 +53,7 @@ $route['default_controller'] = 'HomeController';
 
 $route['admin'] = 'backend/DashboardController';
 $route['admin/login'] = 'backend/AuthController/login';
+$route['admin/logout'] = 'backend/AuthController/logout';
 
 //$route['default_controller'] = 'welcome';
 $route['404_override'] = '';

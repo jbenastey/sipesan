@@ -27,27 +27,48 @@
 			<div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-full-bg">
 				<div class="row w-100">
 					<div class="col-lg-4 mx-auto">
+						<?php if ($this->session->flashdata('alert') == 'belum_login'): ?>
+							<div class="alert alert-warning alert-dismissible animated fadeInDown round" style="" id="feedback"
+								 role="alert">
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								Silahkan Login terlebih dahulu
+							</div>
+						<?php
+						elseif ($this->session->flashdata('alert') == 'login_gagal'):
+							?>
+							<div class="alert alert-danger alert-dismissible animated fadeInDown round" style="" id="feedback"
+								 role="alert">
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								Username atau password salah
+							</div>
+						<?php
+						endif;
+						?>
 						<div class="auth-form-dark text-left p-5">
 							<h2>Login</h2>
 							<h4 class="font-weight-light">Hello! let's get started</h4>
-							<form class="pt-5">
+							<?=form_open('admin/login')?>
 								<div class="form-group">
 									<label for="exampleInputEmail1">Username</label>
-									<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Username">
+									<input type="name" class="form-control" id="exampleInputEmail1" placeholder="Username" name="username" required>
 									<i class="mdi mdi-account"></i>
 								</div>
 								<div class="form-group">
 									<label for="exampleInputPassword1">Password</label>
-									<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+									<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" required>
 									<i class="mdi mdi-eye"></i>
 								</div>
 								<div class="mt-5">
-									<a class="btn btn-block btn-warning btn-lg font-weight-medium" href="<?=base_url()?>assets/backend/index-2.html">Login</a>
+									<button class="btn btn-block btn-warning btn-lg font-weight-medium" name="login">Login</button>
 								</div>
 								<div class="mt-3 text-center">
 									<a href="#" class="auth-link text-white">Forgot password?</a>
 								</div>
-							</form>
+							<?=form_close()?>
 						</div>
 					</div>
 				</div>
