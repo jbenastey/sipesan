@@ -217,51 +217,13 @@
 										<div class="dropdown-menu-category-section-content">
 											<div class="row">
 												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Home & Garden</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Home</a>
-															<p>Ipsum massa parturient erat erat</p>
-														</li>
-														<li><a href="#">Kitchen</a>
-															<p>Laoreet fermentum sodales etiam proin</p>
-														</li>
-														<li><a href="#">Furniture & Decor</a>
-															<p>Pellentesque nisi sit tempor purus</p>
-														</li>
-														<li><a href="#">Bedding & Bath</a>
-															<p>Purus proin sociis dictumst vulputate</p>
-														</li>
-														<li><a href="#">Appilances</a>
-															<p>Habitasse at auctor nec metus</p>
-														</li>
-														<li><a href="#">Patio, Lawn & Garden</a>
-															<p>Montes volutpat dolor nibh pulvinar</p>
-														</li>
-														<li><a href="#">Wedding Registry</a>
-															<p>Amet blandit inceptos nullam semper</p>
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Home Improvement</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Home Improvement</a>
-															<p>Velit euismod pellentesque ipsum aenean</p>
-														</li>
-														<li><a href="#">Lamps & Light Fixtures</a>
-															<p>Congue senectus justo ad dolor</p>
-														</li>
-														<li><a href="#">Kitchen & Bath Fixtures</a>
-															<p>Natoque urna cum interdum tincidunt</p>
-														</li>
-														<li><a href="#">Home Automation</a>
-															<p>Mollis cras auctor eget habitant</p>
-														</li>
-													</ul>
+													<h5 class="dropdown-menu-category-title">Stiker</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus eos eum labore laborum maxime odio odit placeat repellendus reprehenderit, sapiente similique, tenetur unde velit veritatis. Error iure possimus veniam!</p>
+													<a class="btn btn-lg btn-primary" href="#">Pesan Stiker Sekarang <i class="fa fa-caret-right"></i></a>
 												</div>
 											</div>
 										</div>
-										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/test_cat/2.png" alt="Image Alternative text" title="Stiker" style="right: -10px;" />
+										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/sipesan/stiker.png" alt="Image Alternative text" title="Stiker" style="width: 350px; right: -10px;" />
 									</div>
 								</div>
 							</li>
@@ -271,57 +233,13 @@
 										<div class="dropdown-menu-category-section-content">
 											<div class="row">
 												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Jewelry</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Necklances & Pendants</a>
-															<p>Dolor amet nascetur varius arcu</p>
-														</li>
-														<li><a href="#">Bracelets</a>
-															<p>Pellentesque himenaeos ipsum urna quisque</p>
-														</li>
-														<li><a href="#">Rings</a>
-															<p>Nostra hac molestie porttitor quisque</p>
-														</li>
-														<li><a href="#">Errings</a>
-															<p>Tempor blandit felis rutrum mus</p>
-														</li>
-														<li><a href="#">Wedding & Engagement</a>
-															<p>Felis velit cubilia magna lacus</p>
-														</li>
-														<li><a href="#">Charms</a>
-															<p>Ligula semper et curabitur dapibus</p>
-														</li>
-														<li><a href="#">Booches</a>
-															<p>Est vulputate porta ut litora</p>
-														</li>
-														<li><a href="#">Men's Jewelry</a>
-															<p>Eros sagittis commodo tempus curae</p>
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Jewelry Shops</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Contemporary & Designer</a>
-															<p>Ornare malesuada luctus etiam viverra</p>
-														</li>
-														<li><a href="#">Juniors</a>
-															<p>Maecenas proin potenti aenean tortor</p>
-														</li>
-														<li><a href="#">Meternity</a>
-															<p>Nostra at maecenas bibendum netus</p>
-														</li>
-														<li><a href="#">Pettite</a>
-															<p>Justo neque tempus nostra iaculis</p>
-														</li>
-														<li><a href="#">Uniforms, Works & Safety</a>
-															<p>Aliquet orci dictum adipiscing auctor</p>
-														</li>
-													</ul>
+													<h5 class="dropdown-menu-category-title">Spanduk</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus eos eum labore laborum maxime odio odit placeat repellendus reprehenderit, sapiente similique, tenetur unde velit veritatis. Error iure possimus veniam!</p>
+													<a class="btn btn-lg btn-primary" href="#">Pesan Spanduk Sekarang <i class="fa fa-caret-right"></i></a>
 												</div>
 											</div>
 										</div>
-										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/test_cat/3.png" alt="Image Alternative text" title="Image Title" style="right: -10px; bottom: -10px;" />
+										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/sipesan/spanduk.png" alt="Image Alternative text" title="Spanduk" style="width: 350px;right: -10px; bottom: -10px;" />
 									</div>
 								</div>
 							</li>
@@ -331,54 +249,13 @@
 										<div class="dropdown-menu-category-section-content">
 											<div class="row">
 												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Kids Clothing</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Accessories</a>
-															<p>Dolor eleifend venenatis inceptos ullamcorper</p>
-														</li>
-														<li><a href="#">Active Wear</a>
-															<p>Eros etiam elementum non egestas</p>
-														</li>
-														<li><a href="#">Coats & Jackets</a>
-															<p>Nascetur felis orci netus urna</p>
-														</li>
-														<li><a href="#">Jeans</a>
-															<p>Sociosqu suscipit feugiat vel molestie</p>
-														</li>
-														<li><a href="#">Sets</a>
-															<p>Netus turpis primis nostra placerat</p>
-														</li>
-														<li><a href="#">Indoors</a>
-															<p>Facilisi suscipit sed magna vestibulum</p>
-														</li>
-														<li><a href="#">Swimwear</a>
-															<p>Lacinia fermentum sollicitudin tempus aliquam</p>
-														</li>
-														<li><a href="#">Special Occasion</a>
-															<p>Tempus condimentum mauris ridiculus posuere</p>
-														</li>
-														<li><a href="#">Shoes</a>
-															<p>Commodo sociosqu eleifend mauris dictum</p>
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">More For Kids</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Kids Furniture</a>
-															<p>Faucibus mauris metus dictumst turpis</p>
-														</li>
-														<li><a href="#">Kids Jewelry & Watches</a>
-															<p>Dui libero litora commodo interdum</p>
-														</li>
-														<li><a href="#">Toys & Games</a>
-															<p>Metus suspendisse sollicitudin posuere leo</p>
-														</li>
-													</ul>
+													<h5 class="dropdown-menu-category-title">Kartu Nama</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus eos eum labore laborum maxime odio odit placeat repellendus reprehenderit, sapiente similique, tenetur unde velit veritatis. Error iure possimus veniam!</p>
+													<a class="btn btn-lg btn-primary" href="#">Pesan Kartu Nama Sekarang <i class="fa fa-caret-right"></i></a>
 												</div>
 											</div>
 										</div>
-										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/test_cat/4.png" alt="Image Alternative text" title="Image Title" />
+										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/sipesan/kartunama.png" alt="Image Alternative text" title="Kartu Nama" style="width: 350px; right: -30px"/>
 									</div>
 								</div>
 							</li>
@@ -388,57 +265,13 @@
 										<div class="dropdown-menu-category-section-content">
 											<div class="row">
 												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Electronics</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">TV & Video</a>
-															<p>Potenti nunc dolor leo taciti</p>
-														</li>
-														<li><a href="#">Home Audio & Theater</a>
-															<p>Interdum luctus elementum per parturient</p>
-														</li>
-														<li><a href="#">Camera, Photo & Video</a>
-															<p>Orci ante venenatis fringilla etiam</p>
-														</li>
-														<li><a href="#">Cell Phones & Accessories</a>
-															<p>Nibh blandit ullamcorper luctus blandit</p>
-														</li>
-														<li><a href="#">Headphones</a>
-															<p>Torquent himenaeos sollicitudin enim praesent</p>
-														</li>
-														<li><a href="#">Video Games</a>
-															<p>Dapibus lobortis facilisis interdum etiam</p>
-														</li>
-														<li><a href="#">Gar Electronics</a>
-															<p>Varius velit fames dapibus habitasse</p>
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Computers</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Laptops & Tablets</a>
-															<p>Leo eros sed fames lorem</p>
-														</li>
-														<li><a href="#">Desktops & Monitors</a>
-															<p>Non pellentesque tincidunt est dis</p>
-														</li>
-														<li><a href="#">Computer Accessories</a>
-															<p>Porta porta montes himenaeos imperdiet</p>
-														</li>
-														<li><a href="#">Software</a>
-															<p>Senectus metus vitae posuere suspendisse</p>
-														</li>
-														<li><a href="#">Printers & Ink</a>
-															<p>Ultrices gravida consectetur tristique velit</p>
-														</li>
-														<li><a href="#">Networking</a>
-															<p>Fringilla neque montes habitant etiam</p>
-														</li>
-													</ul>
+													<h5 class="dropdown-menu-category-title">Brosur</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus eos eum labore laborum maxime odio odit placeat repellendus reprehenderit, sapiente similique, tenetur unde velit veritatis. Error iure possimus veniam!</p>
+													<a class="btn btn-lg btn-primary" href="#">Pesan Brosur Sekarang <i class="fa fa-caret-right"></i></a>
 												</div>
 											</div>
 										</div>
-										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/test_cat/5.png" alt="Image Alternative text" title="Image Title" />
+										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/sipesan/brosur.png" alt="Image Alternative text" title="Brosur" style="width: 350px; right: -10px" />
 									</div>
 								</div>
 							</li>
