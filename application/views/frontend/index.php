@@ -209,9 +209,9 @@
 			</div>
 			<div class="collapse navbar-collapse" id="main-nav-collapse">
 				<ul class="nav navbar-nav">
-					<li class="dropdown"><a href="#"><i class="fa fa-reorder"></i>&nbsp; Shop by Category<i class="drop-caret" data-toggle="dropdown"></i></a>
+					<li class="dropdown"><a href="#"><i class="fa fa-reorder"></i>&nbsp; Pesan Sekarang<i class="drop-caret" data-toggle="dropdown"></i></a>
 						<ul class="dropdown-menu dropdown-menu-category">
-							<li><a href="#"><i class="fa fa-home dropdown-menu-category-icon"></i>Home & Garden</a>
+							<li><a href="#"><i class="fa fa-sticky-note dropdown-menu-category-icon"></i>Stiker</a>
 								<div class="dropdown-menu-category-section">
 									<div class="dropdown-menu-category-section-inner">
 										<div class="dropdown-menu-category-section-content">
@@ -261,11 +261,11 @@
 												</div>
 											</div>
 										</div>
-										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/test_cat/2.png" alt="Image Alternative text" title="Image Title" style="right: -10px;" />
+										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/test_cat/2.png" alt="Image Alternative text" title="Stiker" style="right: -10px;" />
 									</div>
 								</div>
 							</li>
-							<li><a href="#"><i class="fa fa-diamond dropdown-menu-category-icon"></i>Jewelry</a>
+							<li><a href="#"><i class="fa fa-photo dropdown-menu-category-icon"></i>Spanduk</a>
 								<div class="dropdown-menu-category-section">
 									<div class="dropdown-menu-category-section-inner">
 										<div class="dropdown-menu-category-section-content">
@@ -325,7 +325,7 @@
 									</div>
 								</div>
 							</li>
-							<li><a href="#"><i class="fa fa-child dropdown-menu-category-icon"></i>Toy & Kids</a>
+							<li><a href="#"><i class="fa fa-id-card dropdown-menu-category-icon"></i>Kartu Nama</a>
 								<div class="dropdown-menu-category-section">
 									<div class="dropdown-menu-category-section-inner">
 										<div class="dropdown-menu-category-section-content">
@@ -382,7 +382,7 @@
 									</div>
 								</div>
 							</li>
-							<li><a href="#"><i class="fa fa-plug dropdown-menu-category-icon"></i>Electronics</a>
+							<li><a href="#"><i class="fa fa-file-image-o dropdown-menu-category-icon"></i>Brosur</a>
 								<div class="dropdown-menu-category-section">
 									<div class="dropdown-menu-category-section-inner">
 										<div class="dropdown-menu-category-section-content">
@@ -439,387 +439,6 @@
 											</div>
 										</div>
 										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/test_cat/5.png" alt="Image Alternative text" title="Image Title" />
-									</div>
-								</div>
-							</li>
-							<li><a href="#"><i class="fa fa-tags dropdown-menu-category-icon"></i>Clothes & Shoes</a>
-								<div class="dropdown-menu-category-section">
-									<div class="dropdown-menu-category-section-inner">
-										<div class="dropdown-menu-category-section-content">
-											<div class="row">
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">TheBox Fashion</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Woman</a>
-															<p>Neque tempus felis aenean augue</p>
-														</li>
-														<li><a href="#">Men</a>
-															<p>Malesuada neque ultricies mollis massa</p>
-														</li>
-														<li><a href="#">Girls</a>
-															<p>Hac sem ut maecenas himenaeos</p>
-														</li>
-														<li><a href="#">Boys</a>
-															<p>Aenean pulvinar molestie sociis lacus</p>
-														</li>
-														<li><a href="#">Baby</a>
-															<p>Ullamcorper elit lobortis habitant ut</p>
-														</li>
-														<li><a href="#">Luggage</a>
-															<p>Posuere maecenas nunc quisque metus</p>
-														</li>
-														<li><a href="#">Accessories</a>
-															<p>Nostra nullam tellus rutrum at</p>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/test_cat/6.png" alt="Image Alternative text" title="Image Title" style="right: -20px;" />
-									</div>
-								</div>
-							</li>
-							<li><a href="#"><i class="fa fa-futbol-o dropdown-menu-category-icon"></i>Sports</a>
-								<div class="dropdown-menu-category-section">
-									<div class="dropdown-menu-category-section-inner">
-										<div class="dropdown-menu-category-section-content">
-											<div class="row">
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Sports</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Athletic Clothing</a>
-															<p>Diam egestas augue nascetur nostra</p>
-														</li>
-														<li><a href="#">Exorcise & Fitness</a>
-															<p>Facilisi malesuada feugiat scelerisque aptent</p>
-														</li>
-														<li><a href="#">Hunting & Fishing</a>
-															<p>Parturient augue at vestibulum nulla</p>
-														</li>
-														<li><a href="#">Team Sports</a>
-															<p>Adipiscing eros a ac tincidunt</p>
-														</li>
-														<li><a href="#">Fan Sports</a>
-															<p>Pretium nullam torquent torquent fames</p>
-														</li>
-														<li><a href="#">Golf</a>
-															<p>Semper tempor quam habitant aliquam</p>
-														</li>
-														<li><a href="#">Sports Collections</a>
-															<p>Aptent platea platea elit adipiscing</p>
-														</li>
-														<li><a href="#">Camping & Hiking</a>
-															<p>Lacinia phasellus urna tellus diam</p>
-														</li>
-														<li><a href="#">Cycling</a>
-															<p>Curae amet dis parturient lorem</p>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/test_cat/7.png" alt="Image Alternative text" title="Image Title" style="right: -39px;" />
-									</div>
-								</div>
-							</li>
-							<li><a href="#"><i class="fa fa-music dropdown-menu-category-icon"></i>Entertaiment</a>
-								<div class="dropdown-menu-category-section">
-									<div class="dropdown-menu-category-section-inner">
-										<div class="dropdown-menu-category-section-content">
-											<div class="row">
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Entertaiment</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Video Games & Consoles</a>
-															<p>At blandit bibendum lobortis venenatis</p>
-														</li>
-														<li><a href="#">Music</a>
-															<p>Cras dictum luctus dis leo</p>
-														</li>
-														<li><a href="#">DVD & Movies</a>
-															<p>Dapibus hac purus non rhoncus</p>
-														</li>
-														<li><a href="#">Tickets</a>
-															<p>Leo auctor posuere dignissim neque</p>
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Memorabilia</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Autographs</a>
-														</li>
-														<li><a href="#">Movie</a>
-														</li>
-														<li><a href="#">Music</a>
-														</li>
-														<li><a href="#">Television</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/test_cat/9.png" alt="Image Alternative text" title="Image Title" style="right: -27px;" />
-									</div>
-								</div>
-							</li>
-							<li><a href="#"><i class="fa fa-location-arrow dropdown-menu-category-icon"></i>Travel</a>
-								<div class="dropdown-menu-category-section">
-									<div class="dropdown-menu-category-section-inner">
-										<div class="dropdown-menu-category-section-content">
-											<div class="row">
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Travel Equepment</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Luggage</a>
-															<p>Cubilia habitant curae consequat laoreet</p>
-														</li>
-														<li><a href="#">Travel Accessories</a>
-															<p>Nulla torquent tortor turpis consectetur</p>
-														</li>
-														<li><a href="#">Luggage Accessories</a>
-															<p>Condimentum erat amet ultricies ad</p>
-														</li>
-														<li><a href="#">Lodging</a>
-															<p>Amet sapien ornare habitasse nisl</p>
-														</li>
-														<li><a href="#">Maps</a>
-															<p>Orci id feugiat rutrum morbi</p>
-														</li>
-														<li><a href="#">Other Travel</a>
-															<p>Potenti pellentesque ullamcorper viverra proin</p>
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Booking</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Vacation Packages</a>
-															<p>Nascetur suscipit ullamcorper amet rhoncus</p>
-														</li>
-														<li><a href="#">Campground & RV</a>
-															<p>Ut semper pulvinar maecenas accumsan</p>
-														</li>
-														<li><a href="#">Rail</a>
-															<p>Parturient integer lacus justo torquent</p>
-														</li>
-														<li><a href="#">Car Rental</a>
-															<p>Cras sociis a massa molestie</p>
-														</li>
-														<li><a href="#">Cruises</a>
-															<p>Inceptos congue venenatis platea hac</p>
-														</li>
-														<li><a href="#">Airline</a>
-															<p>Neque egestas dignissim lacinia quisque</p>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/test_cat/11.png" alt="Image Alternative text" title="Image Title" style="right: -100px;" />
-									</div>
-								</div>
-							</li>
-							<li><a href="#"><i class="fa fa-picture-o dropdown-menu-category-icon"></i>Art & Design</a>
-								<div class="dropdown-menu-category-section">
-									<div class="dropdown-menu-category-section-inner">
-										<div class="dropdown-menu-category-section-content">
-											<div class="row">
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Art</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Paintings from Dealers & Resellers</a>
-															<p>Ridiculus cras semper magnis nascetur</p>
-														</li>
-														<li><a href="#">Paintings Direct from Artist</a>
-															<p>Consequat enim conubia auctor eleifend</p>
-														</li>
-														<li><a href="#">Art Prints</a>
-															<p>Vel magnis est auctor nunc</p>
-														</li>
-														<li><a href="#">Art Photographs from Resellers</a>
-															<p>Vel nulla primis mauris fringilla</p>
-														</li>
-														<li><a href="#">Art Photographs from the Artist</a>
-															<p>Blandit sapien fermentum volutpat curabitur</p>
-														</li>
-														<li><a href="#">Art Posters</a>
-															<p>Himenaeos eros quis risus amet</p>
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Design</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Home Decor Decals</a>
-															<p>Arcu viverra laoreet ullamcorper ut</p>
-														</li>
-														<li><a href="#">Furniture</a>
-															<p>Mauris blandit nascetur non platea</p>
-														</li>
-														<li><a href="#">Wallpapers</a>
-															<p>Donec condimentum facilisi hac quisque</p>
-														</li>
-														<li><a href="#">Bar Flasks</a>
-															<p>Consectetur posuere suspendisse duis platea</p>
-														</li>
-														<li><a href="#">Posters & Prints</a>
-															<p>Augue aliquet morbi lacus consectetur</p>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/test_cat/12.png" alt="Image Alternative text" title="Image Title" />
-									</div>
-								</div>
-							</li>
-							<li><a href="#"><i class="fa fa-motorcycle dropdown-menu-category-icon"></i>Motors</a>
-								<div class="dropdown-menu-category-section">
-									<div class="dropdown-menu-category-section-inner">
-										<div class="dropdown-menu-category-section-content">
-											<div class="row">
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Motors</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Parts & Accessories</a>
-															<p>Elementum egestas lacus amet fames</p>
-														</li>
-														<li><a href="#">Cars & Trucks</a>
-															<p>Donec et nec neque vitae</p>
-														</li>
-														<li><a href="#">Motorcycles</a>
-															<p>At ut turpis maecenas in</p>
-														</li>
-														<li><a href="#">Passenger Vehicles</a>
-															<p>Sodales nunc dui habitant mattis</p>
-														</li>
-														<li><a href="#">Industry Vehicles</a>
-															<p>Nisi conubia mi penatibus cum</p>
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Brands</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">BMW</a>
-														</li>
-														<li><a href="#">Land Rover</a>
-														</li>
-														<li><a href="#">Nissan</a>
-														</li>
-														<li><a href="#">Honda</a>
-														</li>
-														<li><a href="#">Ford</a>
-														</li>
-														<li><a href="#">Porsche</a>
-														</li>
-														<li><a href="#">Audi</a>
-														</li>
-														<li><a href="#">Mercedes-Benz</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/test_cat/13.png" alt="Image Alternative text" title="Image Title" style="right: -15px; bottom: -15px;" />
-									</div>
-								</div>
-							</li>
-							<li><a href="#"><i class="fa fa-paw dropdown-menu-category-icon"></i>Pets</a>
-								<div class="dropdown-menu-category-section">
-									<div class="dropdown-menu-category-section-inner">
-										<div class="dropdown-menu-category-section-content">
-											<h5 class="dropdown-menu-category-title">Pet Supplies</h5>
-											<div class="row">
-												<div class="col-md-4">
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Backyard Poultry Supplies</a>
-															<p>Dignissim eros id dignissim consectetur</p>
-														</li>
-														<li><a href="#">Bird Supplies</a>
-															<p>Massa nam mattis habitant nisl</p>
-														</li>
-														<li><a href="#">Cat Supplies</a>
-															<p>Gravida aliquam hendrerit orci vel</p>
-														</li>
-														<li><a href="#">Dog Supplies</a>
-															<p>Non conubia duis congue netus</p>
-														</li>
-														<li><a href="#">Pet Memorials & Urns</a>
-															<p>Condimentum lacinia aenean scelerisque est</p>
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-4">
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Fish & Aquariums</a>
-															<p>Suspendisse lacus nisi bibendum non</p>
-														</li>
-														<li><a href="#">Horse Supplies</a>
-															<p>Mi senectus mi et aptent</p>
-														</li>
-														<li><a href="#">Reptile Supplies</a>
-															<p>Senectus arcu varius dui laoreet</p>
-														</li>
-														<li><a href="#">Small Animal Supplies</a>
-															<p>Parturient donec proin ac risus</p>
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-4">
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Wholesale Lots</a>
-															<p>Dapibus sit id inceptos justo</p>
-														</li>
-														<li><a href="#">Other Pet Supplies</a>
-															<p>Duis tristique viverra amet consequat</p>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/test_cat/14.png" alt="Image Alternative text" title="Image Title" style="right: -15px;" />
-									</div>
-								</div>
-							</li>
-							<li><a href="#"><i class="fa fa-cubes dropdown-menu-category-icon"></i>Hobbies & DIY</a>
-								<div class="dropdown-menu-category-section">
-									<div class="dropdown-menu-category-section-inner">
-										<div class="dropdown-menu-category-section-content">
-											<div class="row">
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Hobby & DIY</h5>
-													<ul class="dropdown-menu-category-list">
-														<li><a href="#">Model & Kit Tools</a>
-															<p>Porta aenean mauris consequat tincidunt</p>
-														</li>
-														<li><a href="#">Supplies & Engines</a>
-															<p>Lectus sagittis tellus dapibus suspendisse</p>
-														</li>
-														<li><a href="#">RC Airline & Helicopter</a>
-															<p>Porta eget mattis tempus vestibulum</p>
-														</li>
-														<li><a href="#">RC Car, Truck & motorcycle</a>
-															<p>Mus imperdiet nibh sem pharetra</p>
-														</li>
-														<li><a href="#">Military Airline Models & Kits</a>
-															<p>Quis netus vel vehicula class</p>
-														</li>
-														<li><a href="#">Craft Airbrushing Supplies</a>
-															<p>Vestibulum nisl donec hendrerit fermentum</p>
-														</li>
-														<li><a href="#">Card Making Supplies</a>
-															<p>Magna sed amet purus sit</p>
-														</li>
-														<li><a href="#">Craft Sewing</a>
-															<p>Nec class sit fringilla tellus</p>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<img class="dropdown-menu-category-section-theme-img" src="<?=base_url()?>assets/frontend/img/test_cat/15.png" alt="Image Alternative text" title="Image Title" style="height: 100%;" />
 									</div>
 								</div>
 							</li>

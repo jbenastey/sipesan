@@ -1,3 +1,4 @@
+<div class="col-12">
 <?php
 if ($this->session->flashdata('alert') == 'login_sukses'):
 	?>
@@ -23,3 +24,4 @@ elseif ($this->session->flashdata('alert') == 'sudah_login'):
 <?php
 endif;
 ?>
+</div>
