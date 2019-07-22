@@ -35,6 +35,7 @@
 	<link rel="alternate stylesheet" type="text/css" href="<?=base_url()?>assets/frontend/css/schemes/leather.css" title="leather" media="all" />
 	<link rel="alternate stylesheet" type="text/css" href="<?=base_url()?>assets/frontend/css/schemes/denim.css" title="denim" media="all" />
 	<link rel="alternate stylesheet" type="text/css" href="<?=base_url()?>assets/frontend/css/schemes/scarlet.css" title="scarlet" media="all" />
+	<link rel="stylesheet" href="<?=base_url()?>assets/backend/node_modules/dropify/dist/css/dropify.min.css">
 </head>
 
 <body>

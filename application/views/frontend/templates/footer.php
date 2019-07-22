@@ -84,7 +84,7 @@
 			<li><a href="#">Payments & Refunds</a>
 			</li>
 		</ul>
-		<img class="main-footer-img" src="<?=base_url()?>assets/frontend/img/test_footer2.png" alt="Image Alternative text" title="Image Title" />
+
 	</div>
 </footer>
 <div class="copyright-area">
@@ -132,6 +132,9 @@
 
 <script src="<?=base_url()?>assets/frontend/js/switcher.js"></script>
 
+
+<script src="<?=base_url()?>assets/backend/node_modules/dropify/dist/js/dropify.min.js"></script>
+<script src="<?=base_url()?>assets/backend/js/dropify.js"></script>
 
 
 </body>
