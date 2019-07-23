@@ -76,8 +76,8 @@
 				<div class="col-md-4">
 					<div class="box-highlight">
 						<h4>Total</h4>
-						<p class="product-page-price">$199.99</p>
-						<a class="btn btn-block btn-primary" href="#"><i class="fa fa-shopping-cart"></i>Add to Cart</a>
+						<h3>Rp. 200.000</h3>
+						<a class="btn btn-block btn-primary" href="<?=base_url('keranjang')?>"><i class="fa fa-shopping-cart"></i>Add to Cart</a>
 						<div class="product-page-side-section">
 							<h5 class="product-page-side-title">Share This Item</h5>
 							<ul class="product-page-share-item">

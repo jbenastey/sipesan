@@ -53,6 +53,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'HomeController';
 $route['spanduk'] = 'PesanController/pesanSpanduk';
 
+$route['keranjang'] = 'BayarController/keranjang';
+
 
 //backend
 $route['admin'] = 'backend/DashboardController';

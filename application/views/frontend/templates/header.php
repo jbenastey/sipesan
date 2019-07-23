@@ -236,7 +236,7 @@
 												<div class="col-md-6">
 													<h5 class="dropdown-menu-category-title">Spanduk</h5>
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus eos eum labore laborum maxime odio odit placeat repellendus reprehenderit, sapiente similique, tenetur unde velit veritatis. Error iure possimus veniam!</p>
-													<a class="btn btn-lg btn-primary" href="#">Pesan Spanduk Sekarang <i class="fa fa-caret-right"></i></a>
+													<a class="btn btn-lg btn-primary" href="<?=base_url('spanduk')?>">Pesan Spanduk Sekarang <i class="fa fa-caret-right"></i></a>
 												</div>
 											</div>
 										</div>
@@ -444,7 +444,7 @@
 					<li><a href="#nav-account-dialog" data-effect="mfp-move-from-top" class="popup-text">Create Account</a>
 					</li>
 					<li class="dropdown">
-						<a class="fa fa-shopping-cart" href="shopping-cart.html"></a>
+						<a class="fa fa-shopping-cart" href="<?=base_url('keranjang')?>"></a>
 						<ul class="dropdown-menu dropdown-menu-shipping-cart">
 							<li>
 								<a class="dropdown-menu-shipping-cart-img" href="#">
