@@ -17,4 +17,9 @@ class BayarController extends CI_Controller{
 		$this->load->view('frontend/pembayaran/bayar');
 		$this->load->view('frontend/templates/footer');
 	}
+	public function selesai(){
+		$this->load->view('frontend/templates/header');
+		$this->load->view('frontend/pembayaran/selesai');
+		$this->load->view('frontend/templates/footer');
+	}
 }

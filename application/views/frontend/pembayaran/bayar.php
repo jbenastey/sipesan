@@ -161,7 +161,7 @@
 						<input class="form-control" placeholder="mm/yy" type="text" />
 					</div>
 				</div>
-			</div><a class="btn btn-primary">Proceed Payment</a>
+			</div><a class="btn btn-primary" href="<?=base_url('selesai')?>">Proceed Payment</a>
 			<div class="gap gap-small"></div>
 			<img src="<?=base_url()?>assets/frontend/img/paypal.png" alt="Image Alternative text" title="Image Title" />
 			<p>Important: You will be redirected to PayPal's website to securely complete your payment.</p><a class="btn btn-primary">Pay With Paypal</a>
