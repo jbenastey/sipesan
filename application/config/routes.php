@@ -54,6 +54,7 @@ $route['default_controller'] = 'HomeController';
 $route['spanduk'] = 'PesanController/pesanSpanduk';
 
 $route['keranjang'] = 'BayarController/keranjang';
+$route['bayar'] = 'BayarController/bayar';
 
 
 //backend
