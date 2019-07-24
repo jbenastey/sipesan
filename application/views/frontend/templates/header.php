@@ -278,159 +278,6 @@
 							</li>
 						</ul>
 					</li>
-					<li class="dropdown yamm-fw"><a href="#">Pages<i class="drop-caret" data-toggle="dropdown"></i></a>
-						<ul class="dropdown-menu">
-							<li class="yamm-content">
-								<div class="row row-eq-height row-col-border">
-									<div class="col-md-2">
-										<h5>Homepages</h5>
-										<ul class="dropdown-menu-items-list">
-											<li><a href="index.html">Layout 1</a>
-												<p class="dropdown-menu-items-list-desc">Default Layout</p>
-											</li>
-											<li><a href="index-layout-2.html">Layout 2</a>
-												<p class="dropdown-menu-items-list-desc">Banners Area + Product Carousel</p>
-											</li>
-											<li><a href="index-layout-3.html">Layout 3</a>
-												<p class="dropdown-menu-items-list-desc">Aside Departmens</p>
-											</li>
-											<li><a href="index-layout-4.html">Layout 4</a>
-												<p class="dropdown-menu-items-list-desc">Sidebar Right</p>
-											</li>
-											<li><a href="index-layout-5.html">Layout 5</a>
-												<p class="dropdown-menu-items-list-desc">Small Aside Departmens + Sidebar</p>
-											</li>
-											<li><a href="index-layout-6.html">Layout 6</a>
-												<p class="dropdown-menu-items-list-desc">Full Banners + Product Tabs</p>
-											</li>
-											<li><a href="index-layout-7.html">Layout 7</a>
-												<p class="dropdown-menu-items-list-desc">Small Aside Departmens + Slider</p>
-											</li>
-										</ul>
-									</div>
-									<div class="col-md-2">
-										<h5>Category Pages</h5>
-										<ul class="dropdown-menu-items-list">
-											<li><a href="category.html">Layout 1</a>
-												<p class="dropdown-menu-items-list-desc">Default Layout</p>
-											</li>
-											<li><a href="category-layout-2.html">Layout 2</a>
-												<p class="dropdown-menu-items-list-desc">Banner Title</p>
-											</li>
-											<li><a href="category-layout-3.html">Layout 3</a>
-												<p class="dropdown-menu-items-list-desc">4 Columns Thumbs</p>
-											</li>
-											<li><a href="category-layout-4.html">Layout 4</a>
-												<p class="dropdown-menu-items-list-desc">6 Columns Small Thumbs</p>
-											</li>
-											<li><a href="category-layout-5.html">Layout 5</a>
-												<p class="dropdown-menu-items-list-desc">3 Columns Horizontal Thumbs</p>
-											</li>
-											<li><a href="category-layout-6.html">Layout 6</a>
-												<p class="dropdown-menu-items-list-desc">4 Columns Horizontal Thumbs</p>
-											</li>
-											<li><a href="category-layout-7.html">Layout 7</a>
-												<p class="dropdown-menu-items-list-desc">No Filters</p>
-											</li>
-											<li><a href="category-layout-8.html">Layout 8</a>
-												<p class="dropdown-menu-items-list-desc">Sidebar Right</p>
-											</li>
-											<li><a href="category-layout-9.html">Layout 9</a>
-												<p class="dropdown-menu-items-list-desc">Sidebar Inverse</p>
-											</li>
-											<li><a href="category-layout-10.html">Layout 10</a>
-												<p class="dropdown-menu-items-list-desc">Sidebar Color</p>
-											</li>
-											<li><a href="category-layout-11.html">Layout 11</a>
-												<p class="dropdown-menu-items-list-desc">Horizontal Thumbs</p>
-											</li>
-										</ul>
-									</div>
-									<div class="col-md-2">
-										<h5>Product Pages</h5>
-										<ul class="dropdown-menu-items-list">
-											<li><a href="product-page.html">Layout 1</a>
-												<p class="dropdown-menu-items-list-desc">Default Layout</p>
-											</li>
-											<li><a href="product-layout-2.html">Layout 2</a>
-												<p class="dropdown-menu-items-list-desc">No Sidebar</p>
-											</li>
-											<li><a href="product-layout-3.html">Layout 3</a>
-												<p class="dropdown-menu-items-list-desc">Full Area Layout + Banners</p>
-											</li>
-											<li><a href="product-layout-4.html">Layout 4</a>
-												<p class="dropdown-menu-items-list-desc">Gallery Style</p>
-											</li>
-											<li><a href="product-layout-5.html">Layout 5</a>
-												<p class="dropdown-menu-items-list-desc">Sidebar Right</p>
-											</li>
-											<li><a href="product-layout-6.html">Layout 6</a>
-												<p class="dropdown-menu-items-list-desc">Sidebar Left</p>
-											</li>
-											<li><a href="product-layout-7.html">Layout 7</a>
-												<p class="dropdown-menu-items-list-desc">Product Gallery Left</p>
-											</li>
-											<li><a href="product-layout-8.html">Layout 8</a>
-												<p class="dropdown-menu-items-list-desc">Product Gallery Right</p>
-											</li>
-										</ul>
-									</div>
-									<div class="col-md-2">
-										<h5>Header Layouts</h5>
-										<ul class="dropdown-menu-items-list">
-											<li><a href="index.html">Layout 1</a>
-												<p class="dropdown-menu-items-list-desc">Default Layout</p>
-											</li>
-											<li><a href="index-nav-layout-2.html">Layout 2</a>
-												<p class="dropdown-menu-items-list-desc">Center Logo + Category Nav</p>
-											</li>
-											<li><a href="index-nav-layout-3.html">Layout 3</a>
-												<p class="dropdown-menu-items-list-desc">Special Area + Extended Search</p>
-											</li>
-											<li><a href="index-nav-layout-4.html">Layout 4</a>
-												<p class="dropdown-menu-items-list-desc">White Area + Extended Search</p>
-											</li>
-										</ul>
-										<hr />
-										<h5>Footer Layouts</h5>
-										<ul class="dropdown-menu-items-list">
-											<li><a href="index.html">Layout 1</a>
-												<p class="dropdown-menu-items-list-desc">Default Layout</p>
-											</li>
-											<li><a href="index-footer-layout-2.html">Layout 2</a>
-												<p class="dropdown-menu-items-list-desc">Minimal</p>
-											</li>
-										</ul>
-									</div>
-									<div class="col-md-2">
-										<h5>Misc</h5>
-										<ul class="dropdown-menu-items-list">
-											<li><a href="shopping-cart.html">Shopping Cart</a>
-											</li>
-											<li><a href="shopping-cart-empty.html">Cart Empty</a>
-											</li>
-											<li><a href="checkout.html">Checkout</a>
-											</li>
-											<li><a href="order-summary.html">Summary</a>
-											</li>
-											<li><a href="about-us.html">About Us</a>
-											</li>
-											<li><a href="contact.html">Contact</a>
-											</li>
-											<li><a href="404.html">404</a>
-											</li>
-											<li><a href="blog.html">Blog</a>
-											</li>
-											<li><a href="blog-post.html">Blog Post</a>
-											</li>
-											<li><a href="login-register.html">Login/Register</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
 				</ul>
 				<form class="navbar-form navbar-left navbar-main-search" role="search">
 					<div class="form-group">
@@ -439,9 +286,17 @@
 					<a class="fa fa-search navbar-main-search-submit" href="#"></a>
 				</form>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text">Sign In</a>
+					<li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text">Login</a>
 					</li>
-					<li><a href="#nav-account-dialog" data-effect="mfp-move-from-top" class="popup-text">Create Account</a>
+					<li><a href="#nav-account-dialog" data-effect="mfp-move-from-top" class="popup-text">Buat Akun</a>
+					</li>
+					<li class="dropdown">
+						<a href="<?=base_url('profil')?>" class="fa fa-user-circle"></a>
+						<ul class="dropdown-menu">
+							<li><a href=""><i class="fa fa-user" style="width: 20%"></i> Profil Saya</a></li>
+							<li><a href=""><i class="fa fa-list" style="width: 20%"></i> Data Pesanan</a></li>
+							<li><a href=""><i class="fa fa-sign-out" style="width: 20%"></i> Logout</a></li>
+						</ul>
 					</li>
 					<li class="dropdown">
 						<a class="fa fa-shopping-cart" href="<?=base_url('keranjang')?>"></a>
