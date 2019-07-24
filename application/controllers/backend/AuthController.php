@@ -23,16 +23,22 @@ class AuthController extends CI_Controller{
 			);
 			$pengguna = $this->PenggunaModel->get_user_account($data);
 			if ($pengguna != null) {
-				$session = array(
-					'session_id' => $pengguna['pengguna_id'],
-					'session_username' => $pengguna['pengguna_username'],
+				if ($pengguna['pengguna_level'] == 'administrator'){
+					$session = array(
+						'session_id' => $pengguna['pengguna_id'],
+						'session_username' => $pengguna['pengguna_username'],
+						'session_email' => $pengguna['pengguna_email'],
 //					'session_nama' => $pengguna['pengguna_nama'],
 //					'session_foto' => $pengguna['pengguna_foto'],
 //					'session_hak_akses' => $pengguna['pengguna_hak_akses']
-				);
-				$this->session->set_flashdata('alert', 'login_sukses');
-				$this->session->set_userdata($session);
-				redirect(base_url('admin'));
+					);
+					$this->session->set_userdata($session);
+					$this->session->set_flashdata('alert', 'login_sukses');
+					redirect(base_url('admin'));
+				} else {
+					$this->session->set_flashdata('alert', 'login_gagal');
+					redirect(base_url('admin/login'));
+				}
 			} else {
 				$this->session->set_flashdata('alert', 'login_gagal');
 				redirect(base_url('admin/login'));

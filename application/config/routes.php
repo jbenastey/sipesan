@@ -51,6 +51,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 //frontend
 $route['default_controller'] = 'HomeController';
+
+$route['login'] = 'AuthController/login';
+$route['logout'] = 'AuthController/logout';
+
 $route['spanduk'] = 'PesanController/pesanSpanduk';
 
 $route['keranjang'] = 'BayarController/keranjang';

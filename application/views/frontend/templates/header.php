@@ -131,59 +131,51 @@
 		<h3 class="widget-title">Member Login</h3>
 		<p>Welcome back, friend. Login to get started</p>
 		<hr />
-		<form>
-			<div class="form-group">
-				<label>Email or Username</label>
-				<input class="form-control" type="text" />
-			</div>
-			<div class="form-group">
-				<label>Password</label>
-				<input class="form-control" type="text" />
-			</div>
-			<div class="checkbox">
-				<label>
-					<input class="i-check" type="checkbox" />Remeber Me</label>
-			</div>
-			<input class="btn btn-primary" type="submit" value="Sign In" />
-		</form>
+		<?=form_open('login')?>
+		<div class="form-group">
+			<label>Username</label>
+			<input class="form-control" type="text" name="username" required autocomplete="off"/>
+		</div>
+		<div class="form-group">
+			<label>Password</label>
+			<input class="form-control" type="password" name="password" required autocomplete="off"/>
+		</div>
+		<input class="btn btn-primary" type="submit" value="Login" name="login" />
+		<?=form_close()?>
 		<div class="gap gap-small"></div>
 		<ul class="list-inline">
-			<li><a href="#nav-account-dialog" class="popup-text">Not Member Yet</a>
+			<li><a href="#nav-account-dialog" class="popup-text">Belum Punya Akun?</a>
 			</li>
-			<li><a href="#nav-pwd-dialog" class="popup-text">Forgot Password?</a>
-			</li>
+<!--			<li><a href="#nav-pwd-dialog" class="popup-text">Forgot Password?</a>-->
+<!--			</li>-->
 		</ul>
 	</div>
 	<div class="mfp-with-anim mfp-hide mfp-dialog clearfix" id="nav-account-dialog">
-		<h3 class="widget-title">Create TheBox Account</h3>
+		<h3 class="widget-title">Buat Akun</h3>
 		<p>Ready to get best offers? Let's get started!</p>
 		<hr />
-		<form>
-			<div class="form-group">
-				<label>Email</label>
-				<input class="form-control" type="text" />
-			</div>
-			<div class="form-group">
-				<label>Password</label>
-				<input class="form-control" type="text" />
-			</div>
-			<div class="form-group">
-				<label>Repeat Password</label>
-				<input class="form-control" type="text" />
-			</div>
-			<div class="form-group">
-				<label>Phone Number</label>
-				<input class="form-control" type="text" />
-			</div>
-			<div class="checkbox">
-				<label>
-					<input class="i-check" type="checkbox" />Subscribe to the Newsletter</label>
-			</div>
-			<input class="btn btn-primary" type="submit" value="Create Account" />
-		</form>
+		<?=form_open('register')?>
+		<div class="form-group">
+			<label>Username</label>
+			<input class="form-control" type="text" required name="username" autocomplete="off"/>
+		</div>
+		<div class="form-group">
+			<label>E-mail</label>
+			<input class="form-control" type="text" required name="email" autocomplete="off"/>
+		</div>
+		<div class="form-group">
+			<label>Password</label>
+			<input class="form-control" type="password" required name="password" autocomplete="off"/>
+		</div>
+		<div class="form-group">
+			<label>Repeat Password</label>
+			<input class="form-control" type="password" required name="password" autocomplete="off"/>
+		</div>
+		<input class="btn btn-primary" type="submit" value="Buat Akun" name="register"/>
+		<?=form_close()?>
 		<div class="gap gap-small"></div>
 		<ul class="list-inline">
-			<li><a href="#nav-login-dialog" class="popup-text">Already Memeber</a>
+			<li><a href="#nav-login-dialog" class="popup-text">Sudah Punya Akun ?</a>
 			</li>
 		</ul>
 	</div>
@@ -286,20 +278,23 @@
 					<a class="fa fa-search navbar-main-search-submit" href="#"></a>
 				</form>
 				<ul class="nav navbar-nav navbar-right">
+					<?php if ($this->session->userdata('session_level') == null):?>
 					<li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text">Login</a>
 					</li>
 					<li><a href="#nav-account-dialog" data-effect="mfp-move-from-top" class="popup-text">Buat Akun</a>
 					</li>
+					<?php else: ?>
 					<li class="dropdown">
-						<a href="<?=base_url('profil')?>" class="fa fa-user-circle"></a>
+						<a href="<?=base_url('profil')?>"><i class="fa fa-user-circle"></i> <?=$this->session->userdata('session_username')?></a>
 						<ul class="dropdown-menu">
 							<li><a href=""><i class="fa fa-user" style="width: 20%"></i> Profil Saya</a></li>
 							<li><a href=""><i class="fa fa-list" style="width: 20%"></i> Data Pesanan</a></li>
-							<li><a href=""><i class="fa fa-sign-out" style="width: 20%"></i> Logout</a></li>
+							<li><a href="<?=base_url('logout')?>"><i class="fa fa-sign-out" style="width: 20%"></i> Logout</a></li>
 						</ul>
 					</li>
+					<?php endif; ?>
 					<li class="dropdown">
-						<a class="fa fa-shopping-cart" href="<?=base_url('keranjang')?>"></a>
+						<a href="<?=base_url('keranjang')?>"><i class="fa fa-shopping-cart"></i></a>
 						<ul class="dropdown-menu dropdown-menu-shipping-cart">
 							<li>
 								<a class="dropdown-menu-shipping-cart-img" href="#">
