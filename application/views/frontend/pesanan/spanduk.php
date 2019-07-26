@@ -10,7 +10,7 @@
 		</ol>
 	</header>
 	<div class="row">
-		<?= form_open('spanduk') ?>
+		<?= form_open('spanduk' , array('enctype' => 'multipart/form-data')) ?>
 		<div class="col-md-5">
 			<h4>Upload Gambar</h4>
 			<div class="product-page-product-wrap">
