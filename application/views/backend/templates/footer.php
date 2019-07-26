@@ -41,6 +41,7 @@
 <script src="<?= base_url('assets/backend/js/data-table.js')?>"></script>
 <!-- Custom js for this page-->
 <script src="<?=base_url()?>assets/backend/js/dashboard.js"></script>
+<script src="<?=base_url()?>assets/backend/js/dashboard.js"></script>
 <!-- End custom js for this page-->
 </body>
 
