@@ -67,6 +67,8 @@ $route['admin'] = 'backend/DashboardController';
 $route['admin/login'] = 'backend/AuthController/login';
 $route['admin/logout'] = 'backend/AuthController/logout';
 
+$route['admin/pelanggan'] = 'backend/PelangganController';
+
 //$route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

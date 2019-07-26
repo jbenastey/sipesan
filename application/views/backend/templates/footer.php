@@ -35,6 +35,10 @@
 <script src="<?=base_url()?>assets/backend/js/settings.js"></script>
 <script src="<?=base_url()?>assets/backend/js/todolist.js"></script>
 <!-- endinject -->
+
+<script src="<?= base_url('assets/backend/node_modules/datatables.net/js/jquery.dataTables.js')?>"></script>
+<script src="<?= base_url('assets/backend/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js')?>"></script>
+<script src="<?= base_url('assets/backend/js/data-table.js')?>"></script>
 <!-- Custom js for this page-->
 <script src="<?=base_url()?>assets/backend/js/dashboard.js"></script>
 <!-- End custom js for this page-->
