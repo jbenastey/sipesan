@@ -13,4 +13,11 @@ class PenggunaModel extends CI_Model{
 		$query = $this->db->get_where('sipesan_pengguna',$user);
 		return $query->row_array();
 	}
+
+	public function get_pelanggan(){
+		$this->db->from('sipesan_pengguna');
+		$this->db->where('pengguna_level','pemesan');
+		$query = $this->db->get();
+		return $query->result_array();
+	}
 }
