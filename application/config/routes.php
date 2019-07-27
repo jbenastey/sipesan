@@ -58,8 +58,8 @@ $route['logout'] = 'AuthController/logout';
 $route['spanduk'] = 'PesanController/pesanSpanduk';
 
 $route['keranjang'] = 'BayarController/keranjang';
-$route['bayar'] = 'BayarController/bayar';
-$route['selesai'] = 'BayarController/selesai';
+$route['bayar/(:any)'] = 'BayarController/bayar/$1';
+$route['selesai/(:any)'] = 'BayarController/selesai/$1';
 
 
 //backend

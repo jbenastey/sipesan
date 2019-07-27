@@ -58,7 +58,7 @@
 		<div class="col-md-2">
 			<h4>Total</h4>
 				<h3>Rp. <?=nominal($keranjang['keranjang_total'])?></h3>
-				<a class="btn btn-primary" href="<?=base_url('bayar')?>">Bayar</a>
+				<a class="btn btn-primary" href="<?=base_url('bayar/'.$keranjang['keranjang_id'])?>">Bayar</a>
 		</div>
 	</div>
 	<ul class="list-inline">

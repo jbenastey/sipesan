@@ -24,14 +24,37 @@ class BayarController extends CI_Controller{
 		$this->load->view('frontend/pembayaran/keranjang',$data);
 		$this->load->view('frontend/templates/footer');
 	}
-	public function bayar(){
+	public function bayar($id){
+		if (isset($_POST['selesai'])){
+			$bank = $this->input->post('tipebayar');
+			$dataBayar = array(
+				'keranjang_status' => 'bayar_menunggu'
+			);
+			$this->BayarModel->update_keranjang($id,$dataBayar);
+			redirect('selesai/'.$bank);
+		}
+		$data = array(
+			'pesanan' => $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'),'belum')->row_array(),
+			'spanduk' => $this->BayarModel->lihat_keranjang_spanduk($this->session->userdata('session_id'),'belum')->result_array(),
+			'stiker' => null,
+			'kartu' => null,
+			'brosur' => null,
+		);
 		$this->load->view('frontend/templates/header');
-		$this->load->view('frontend/pembayaran/bayar');
+		$this->load->view('frontend/pembayaran/bayar',$data);
 		$this->load->view('frontend/templates/footer');
 	}
-	public function selesai(){
+	public function selesai($bank){
+		$dataBank = array(
+			'bni' => 'Bank BNI 123456789 Atas Nama Surya Madani ',
+			'bri' => 'Bank BRI 115511026 Atas Nama Surya Madani '
+		);
+		$data = array(
+			'bank' => $dataBank[$bank],
+			'pesanan' => $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'),'bayar_menunggu')->row_array(),
+		);
 		$this->load->view('frontend/templates/header');
-		$this->load->view('frontend/pembayaran/selesai');
+		$this->load->view('frontend/pembayaran/selesai',$data);
 		$this->load->view('frontend/templates/footer');
 	}
 }

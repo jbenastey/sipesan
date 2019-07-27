@@ -14,6 +14,12 @@ class BayarModel extends CI_Model
 		$query = $this->db->get();
 		return $query->result_array();
 	}
+	public function lihat_keranjang_by_id($id){
+		$this->db->from('sipesan_keranjang');
+		$this->db->where('keranjang_id', $id);
+		$query = $this->db->get();
+		return $query->row_array();
+	}
 	public function lihat_keranjang_status($pengguna_id,$status){
 		$this->db->from('sipesan_keranjang');
 		$this->db->where('keranjang_pengguna_id', $pengguna_id);
