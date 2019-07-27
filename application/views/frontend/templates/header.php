@@ -293,54 +293,8 @@
 						</ul>
 					</li>
 					<?php endif; ?>
-					<li class="dropdown">
+					<li>
 						<a href="<?=base_url('keranjang')?>"><i class="fa fa-shopping-cart"></i></a>
-						<ul class="dropdown-menu dropdown-menu-shipping-cart">
-							<li>
-								<a class="dropdown-menu-shipping-cart-img" href="#">
-									<img src="<?=base_url()?>assets/frontend/img/cart/1.jpg" alt="Image Alternative text" title="Image Title" />
-								</a>
-								<div class="dropdown-menu-shipping-cart-inner">
-									<p class="dropdown-menu-shipping-cart-price">$52</p>
-									<p class="dropdown-menu-shipping-cart-item"><a href="#">Gucci Patent Leather Open Toe Platform</a>
-									</p>
-								</div>
-							</li>
-							<li>
-								<a class="dropdown-menu-shipping-cart-img" href="#">
-									<img src="<?=base_url()?>assets/frontend/img/cart/2.jpg" alt="Image Alternative text" title="Image Title" />
-								</a>
-								<div class="dropdown-menu-shipping-cart-inner">
-									<p class="dropdown-menu-shipping-cart-price">$43</p>
-									<p class="dropdown-menu-shipping-cart-item"><a href="#">Nikon D5200 24.1 MP Digital SLR Camera</a>
-									</p>
-								</div>
-							</li>
-							<li>
-								<a class="dropdown-menu-shipping-cart-img" href="#">
-									<img src="<?=base_url()?>assets/frontend/img/cart/3.jpg" alt="Image Alternative text" title="Image Title" />
-								</a>
-								<div class="dropdown-menu-shipping-cart-inner">
-									<p class="dropdown-menu-shipping-cart-price">$41</p>
-									<p class="dropdown-menu-shipping-cart-item"><a href="#">Apple 11.6" MacBook Air Notebook </a>
-									</p>
-								</div>
-							</li>
-							<li>
-								<a class="dropdown-menu-shipping-cart-img" href="#">
-									<img src="<?=base_url()?>assets/frontend/img/cart/4.jpg" alt="Image Alternative text" title="Image Title" />
-								</a>
-								<div class="dropdown-menu-shipping-cart-inner">
-									<p class="dropdown-menu-shipping-cart-price">$77</p>
-									<p class="dropdown-menu-shipping-cart-item"><a href="#">Fossil Women's Original Boyfriend</a>
-									</p>
-								</div>
-							</li>
-							<li>
-								<p class="dropdown-menu-shipping-cart-total">Total: $150</p>
-								<button class="dropdown-menu-shipping-cart-checkout btn btn-primary">Checkout</button>
-							</li>
-						</ul>
 					</li>
 				</ul>
 			</div>

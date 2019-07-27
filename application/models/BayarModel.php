@@ -20,6 +20,13 @@ class BayarModel extends CI_Model
 		$this->db->where('keranjang_status', $status);
 		return $this->db->get();
 	}
+	public function lihat_keranjang_spanduk($pengguna_id,$status){
+		$this->db->from('sipesan_spanduk');
+		$this->db->join('sipesan_keranjang', 'sipesan_keranjang.keranjang_id = sipesan_spanduk.spanduk_keranjang_id');
+		$this->db->where('keranjang_pengguna_id', $pengguna_id);
+		$this->db->where('keranjang_status', $status);
+		return $this->db->get();
+	}
 	public function simpan_keranjang($data){
 		$this->db->insert('sipesan_keranjang',$data);
 		return $this->db->affected_rows();
