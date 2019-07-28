@@ -29,9 +29,8 @@ class AuthController extends CI_Controller {
 						'session_username' => $pengguna['pengguna_username'],
 						'session_email' => $pengguna['pengguna_email'],
 						'session_level' => $pengguna['pengguna_level'],
-//					'session_nama' => $pengguna['pengguna_nama'],
-//					'session_foto' => $pengguna['pengguna_foto'],
-//					'session_hak_akses' => $pengguna['pengguna_hak_akses']
+						'session_nama' => $pengguna['pengguna_nama'],
+						'session_nomor_hp' => $pengguna['pengguna_nomor_hp'],
 					);
 					$this->session->set_userdata($session);
 					$this->session->set_flashdata('alert', 'login_sukses');

@@ -61,6 +61,8 @@ $route['keranjang'] = 'BayarController/keranjang';
 $route['bayar/(:any)'] = 'BayarController/bayar/$1';
 $route['selesai/(:any)'] = 'BayarController/selesai/$1';
 
+$route['profil'] = 'ProfilController';
+
 
 //backend
 $route['admin'] = 'backend/DashboardController';
