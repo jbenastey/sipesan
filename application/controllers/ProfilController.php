@@ -8,7 +8,7 @@ class ProfilController extends CI_Controller
 	{
 		parent::__construct();
 		$model = array('BayarModel');
-		$helper = array('nominal');
+		$helper = array('nominal','tgl_indo');
 		$this->load->model($model);
 		$this->load->helper($helper);
 		if (!$this->session->has_userdata('session_id')) {
@@ -19,6 +19,22 @@ class ProfilController extends CI_Controller
 	public function index(){
 		$this->load->view('frontend/templates/header');
 		$this->load->view('frontend/profil/index');
+		$this->load->view('frontend/templates/footer');
+	}
+	public function pesanan(){
+		$data = array(
+			'pesanan' => $this->BayarModel->lihat_keranjang_faktur($this->session->userdata('session_id'),'belum')->result_array(),
+		);
+		$this->load->view('frontend/templates/header');
+		$this->load->view('frontend/profil/pesanan',$data);
+		$this->load->view('frontend/templates/footer');
+	}
+	public function detailPesanan($id){
+		$data = array(
+			'pesanan' => $this->BayarModel->lihat_keranjang_faktur_by_id($id,$this->session->userdata('session_id'),'belum')->result_array(),
+		);
+		$this->load->view('frontend/templates/header');
+		$this->load->view('frontend/profil/detail_pesanan',$data);
 		$this->load->view('frontend/templates/footer');
 	}
 }

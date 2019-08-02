@@ -287,8 +287,8 @@
 					<li class="dropdown">
 						<a href="<?=base_url('profil')?>"><i class="fa fa-user-circle"></i> <?=$this->session->userdata('session_username')?></a>
 						<ul class="dropdown-menu">
-							<li><a href=""><i class="fa fa-user" style="width: 20%"></i> Profil Saya</a></li>
-							<li><a href=""><i class="fa fa-list" style="width: 20%"></i> Data Pesanan</a></li>
+							<li><a href="<?=base_url('profil')?>"><i class="fa fa-user" style="width: 20%"></i> Profil Saya</a></li>
+							<li><a href="<?=base_url('pesanan')?>"><i class="fa fa-list" style="width: 20%"></i> Data Pesanan</a></li>
 							<li><a href="<?=base_url('logout')?>"><i class="fa fa-sign-out" style="width: 20%"></i> Logout</a></li>
 						</ul>
 					</li>

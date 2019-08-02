@@ -33,6 +33,21 @@ class BayarModel extends CI_Model
 		$this->db->where('keranjang_status', $status);
 		return $this->db->get();
 	}
+	public function lihat_keranjang_faktur($pengguna_id,$status){
+		$this->db->from('sipesan_keranjang');
+		$this->db->join('sipesan_faktur', 'sipesan_faktur.faktur_keranjang_id = sipesan_keranjang.keranjang_id');
+		$this->db->where('keranjang_pengguna_id', $pengguna_id);
+		$this->db->where('faktur_status', $status);
+		return $this->db->get();
+	}
+	public function lihat_keranjang_faktur_by_id($id,$pengguna_id,$status){
+		$this->db->from('sipesan_keranjang');
+		$this->db->join('sipesan_faktur', 'sipesan_faktur.faktur_keranjang_id = sipesan_keranjang.keranjang_id');
+		$this->db->where('keranjang_pengguna_id', $pengguna_id);
+		$this->db->where('faktur_status', $status);
+		$this->db->where('faktur_id', $id);
+		return $this->db->get();
+	}
 	public function simpan_keranjang($data){
 		$this->db->insert('sipesan_keranjang',$data);
 		return $this->db->affected_rows();
@@ -40,6 +55,10 @@ class BayarModel extends CI_Model
 	public function update_keranjang($id,$data){
 		$this->db->where('keranjang_id', $id);
 		$this->db->update('sipesan_keranjang',$data);
+		return $this->db->affected_rows();
+	}
+	public function simpan_faktur($data){
+		$this->db->insert('sipesan_faktur',$data);
 		return $this->db->affected_rows();
 	}
 }

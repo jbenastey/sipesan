@@ -26,11 +26,18 @@ class BayarController extends CI_Controller{
 	}
 	public function bayar($id){
 		if (isset($_POST['selesai'])){
+			$fakturId = 'INV-' . substr(time(), 5);
 			$bank = $this->input->post('tipebayar');
 			$dataBayar = array(
 				'keranjang_status' => 'bayar_menunggu'
 			);
+			$dataFaktur = array(
+				'faktur_id' => $fakturId,
+				'faktur_keranjang_id' => $id,
+				'faktur_bank' => $bank
+			);
 			$this->BayarModel->update_keranjang($id,$dataBayar);
+			$this->BayarModel->simpan_faktur($dataFaktur);
 			redirect('selesai/'.$bank);
 		}
 		$data = array(
