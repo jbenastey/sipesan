@@ -10,7 +10,7 @@
 			</div>
 		</div>
 		<div class="col-md-9">
-			<h3 class="widget-title">Data Pemesanan</h3>
+			<h3 class="widget-title"><i class="fa fa-list"></i> Data Pemesanan</h3>
 			<div class="box">
 				<table class="table">
 					<thead>
