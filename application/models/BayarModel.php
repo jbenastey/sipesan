@@ -33,18 +33,21 @@ class BayarModel extends CI_Model
 		$this->db->where('keranjang_status', $status);
 		return $this->db->get();
 	}
-	public function lihat_keranjang_faktur($pengguna_id,$status){
+	public function lihat_keranjang_faktur($pengguna_id){
 		$this->db->from('sipesan_keranjang');
 		$this->db->join('sipesan_faktur', 'sipesan_faktur.faktur_keranjang_id = sipesan_keranjang.keranjang_id');
 		$this->db->where('keranjang_pengguna_id', $pengguna_id);
-		$this->db->where('faktur_status', $status);
 		return $this->db->get();
 	}
-	public function lihat_keranjang_faktur_by_id($id,$pengguna_id,$status){
+	public function lihat_keranjang_faktur_admin(){
+		$this->db->from('sipesan_keranjang');
+		$this->db->join('sipesan_faktur', 'sipesan_faktur.faktur_keranjang_id = sipesan_keranjang.keranjang_id');
+		return $this->db->get();
+	}
+	public function lihat_keranjang_faktur_by_id($id,$pengguna_id){
 		$this->db->from('sipesan_keranjang');
 		$this->db->join('sipesan_faktur', 'sipesan_faktur.faktur_keranjang_id = sipesan_keranjang.keranjang_id');
 		$this->db->where('keranjang_pengguna_id', $pengguna_id);
-		$this->db->where('faktur_status', $status);
 		$this->db->where('faktur_id', $id);
 		return $this->db->get();
 	}
@@ -59,6 +62,15 @@ class BayarModel extends CI_Model
 	}
 	public function simpan_faktur($data){
 		$this->db->insert('sipesan_faktur',$data);
+		return $this->db->affected_rows();
+	}
+	public function update_faktur($id,$data){
+		$this->db->where('faktur_id', $id);
+		$this->db->update('sipesan_faktur',$data);
+		return $this->db->affected_rows();
+	}
+	public function simpan_konfirmasi($data){
+		$this->db->insert('sipesan_konfirmasi',$data);
 		return $this->db->affected_rows();
 	}
 }

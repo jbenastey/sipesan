@@ -23,7 +23,7 @@ class ProfilController extends CI_Controller
 	}
 	public function pesanan(){
 		$data = array(
-			'pesanan' => $this->BayarModel->lihat_keranjang_faktur($this->session->userdata('session_id'),'belum')->result_array(),
+			'pesanan' => $this->BayarModel->lihat_keranjang_faktur($this->session->userdata('session_id'))->result_array(),
 		);
 		$this->load->view('frontend/templates/header');
 		$this->load->view('frontend/profil/pesanan',$data);
@@ -31,7 +31,7 @@ class ProfilController extends CI_Controller
 	}
 	public function detailPesanan($id){
 		$data = array(
-			'pesanan' => $this->BayarModel->lihat_keranjang_faktur_by_id($id,$this->session->userdata('session_id'),'belum')->row_array(),
+			'pesanan' => $this->BayarModel->lihat_keranjang_faktur_by_id($id,$this->session->userdata('session_id'))->row_array(),
 			'spanduk' => $this->BayarModel->lihat_keranjang_spanduk($this->session->userdata('session_id'),'bayar_menunggu')->result_array(),
 			'stiker' => null,
 			'kartu' => null,

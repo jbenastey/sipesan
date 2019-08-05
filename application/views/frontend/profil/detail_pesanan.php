@@ -24,9 +24,11 @@
 						<td>&nbsp;
 							<?php if ($pesanan['faktur_status'] == 'belum'):?>
 								<label class="label label-warning">Belum dikonfirmasi</label>
-								<a href="#" class="label label-primary">Konfirmasi Pembayaran</a>
+								<a href="<?=base_url('konfirmasi/'.$pesanan['faktur_id'])?>" class="label label-primary">Konfirmasi Pembayaran</a>
 							<?php elseif ($pesanan['faktur_status'] == 'sudah'):?>
 								<label class="label label-primary">Selesai</label>
+							<?php elseif ($pesanan['faktur_status'] == 'tunggu'):?>
+								<label class="label label-primary">Menunggu</label>
 							<?php endif;?>
 						</td>
 					</tr>
@@ -62,6 +64,8 @@
 							<?php if ($pesanan['faktur_status'] == 'belum'):?>
 								<label class="label label-warning">Belum Lunas</label>
 							<?php elseif ($pesanan['faktur_status'] == 'sudah'):?>
+								<label class="label label-success">Lunas</label>
+							<?php elseif ($pesanan['faktur_status'] == 'tunggu'):?>
 								<label class="label label-primary">Lunas</label>
 							<?php endif;?>
 						</td>

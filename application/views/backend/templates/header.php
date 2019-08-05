@@ -110,7 +110,7 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=base_url('admin')?>">
+						<a class="nav-link" href="<?=base_url('admin/transaksi')?>">
 							<i class="icon-basket-loaded menu-icon"></i>
 							<span class="menu-title">Data Transaksi</span>
 						</a>

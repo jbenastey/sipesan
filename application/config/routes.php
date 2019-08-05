@@ -60,6 +60,7 @@ $route['spanduk'] = 'PesanController/pesanSpanduk';
 $route['keranjang'] = 'BayarController/keranjang';
 $route['bayar/(:any)'] = 'BayarController/bayar/$1';
 $route['selesai/(:any)'] = 'BayarController/selesai/$1';
+$route['konfirmasi/(:any)'] = 'BayarController/konfirmasi/$1';
 
 $route['profil'] = 'ProfilController';
 $route['pesanan'] = 'ProfilController/pesanan';
@@ -72,6 +73,7 @@ $route['admin/login'] = 'backend/AuthController/login';
 $route['admin/logout'] = 'backend/AuthController/logout';
 
 $route['admin/pelanggan'] = 'backend/PelangganController';
+$route['admin/transaksi'] = 'backend/TransaksiController';
 
 //$route['default_controller'] = 'welcome';
 $route['404_override'] = '';

@@ -64,4 +64,49 @@ class BayarController extends CI_Controller{
 		$this->load->view('frontend/pembayaran/selesai',$data);
 		$this->load->view('frontend/templates/footer');
 	}
+	public function konfirmasi($id){
+		if (isset($_POST['konfirmasi'])){
+			$konfirmasiId = 'CFM-' . substr(time(), 5);
+			$rekening = $this->input->post('rekening');
+			$atas_nama = $this->input->post('atas_nama');
+			$nominal = $this->input->post('nominal');
+
+
+			$config['upload_path'] = './assets/images/struk/';
+			$config['allowed_types'] = 'jpg|png|jpeg';
+			$this->load->library('upload', $config);
+			$this->upload->initialize($config);
+
+			if (!$this->upload->do_upload('struk')) {
+				$error = array('error' => $this->upload->display_errors());
+				var_dump($error);
+			} else {
+				$struk = $this->upload->data('file_name');
+
+				$data = array(
+					'konfirmasi_id' => $konfirmasiId,
+					'konfirmasi_faktur_id' => $id,
+					'konfirmasi_rekening' => $rekening,
+					'konfirmasi_atas_nama' => $atas_nama,
+					'konfirmasi_nominal' => $nominal,
+					'konfirmasi_struk' => $struk
+				);
+
+				$dataFaktur = array(
+					'faktur_status' => 'tunggu'
+				);
+
+				$this->BayarModel->simpan_konfirmasi($data);
+				$this->BayarModel->update_faktur($id,$dataFaktur);
+				redirect('pesanan');
+			}
+		} else {
+			$data = array(
+				'pesanan' => $this->BayarModel->lihat_keranjang_faktur_by_id($id,$this->session->userdata('session_id'),'belum')->row_array(),
+			);
+			$this->load->view('frontend/templates/header');
+			$this->load->view('frontend/pembayaran/konfirmasi',$data);
+			$this->load->view('frontend/templates/footer');
+		}
+	}
 }

@@ -40,7 +40,9 @@
 								<?php if ($value['faktur_status'] == 'belum'):?>
 									<label class="label label-warning">Belum dikonfirmasi</label>
 								<?php elseif ($value['faktur_status'] == 'sudah'):?>
-									<label class="label label-primary">Selesai</label>
+									<label class="label label-success">Selesai</label>
+								<?php elseif ($value['faktur_status'] == 'tunggu'):?>
+									<label class="label label-primary">Menunggu </label>
 								<?php endif;?>
 							</td>
 							<td class="text-center">
