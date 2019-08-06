@@ -74,6 +74,8 @@ $route['admin/logout'] = 'backend/AuthController/logout';
 
 $route['admin/pelanggan'] = 'backend/PelangganController';
 $route['admin/transaksi'] = 'backend/TransaksiController';
+$route['admin/transaksi/lihat/(:any)'] = 'backend/TransaksiController/lihat/$1';
+$route['admin/transaksi/konfirmasi/(:any)'] = 'backend/TransaksiController/konfirmasi/$1';
 
 //$route['default_controller'] = 'welcome';
 $route['404_override'] = '';

@@ -7,7 +7,9 @@ class TransaksiController extends CI_Controller {
 	{
 		parent::__construct();
 		$model = array('BayarModel');
+		$helper = array('tgl_indo','nominal');
 		$this->load->model($model);
+		$this->load->helper($helper);
 		if (!$this->session->has_userdata('session_id')) {
 			$this->session->set_flashdata('alert', 'belum_login');
 			redirect(base_url('admin/login'));
@@ -20,5 +22,29 @@ class TransaksiController extends CI_Controller {
 		$this->load->view('backend/templates/header');
 		$this->load->view('backend/transaksi/index',$data);
 		$this->load->view('backend/templates/footer');
+	}
+	public function lihat($id){
+		$transaksi = $this->BayarModel->lihat_keranjang_faktur_admin_by_id($id)->row_array();
+		$konfirmasi = $this->BayarModel->lihat_keranjang_faktur_konfirmasi_admin_by_id($id)->row_array();
+//		echo '<pre>';
+//		var_dump($konfirmasi);die;
+		$data = array(
+			'transaksi' => $transaksi,
+			'konfirmasi' => $konfirmasi,
+			'spanduk' => $this->BayarModel->lihat_keranjang_spanduk($transaksi['keranjang_pengguna_id'],'bayar_menunggu',$transaksi['keranjang_id'])->result_array(),
+			'stiker' => null,
+			'kartu' => null,
+			'brosur' => null,
+		);
+		$this->load->view('backend/templates/header');
+		$this->load->view('backend/transaksi/lihat',$data);
+		$this->load->view('backend/templates/footer');
+	}
+	public function konfirmasi($id){
+		$data = array(
+			'faktur_status' => 'sudah'
+		);
+		$this->BayarModel->update_faktur($id,$data);
+		redirect('admin/transaksi/lihat/'.$id);
 	}
 }

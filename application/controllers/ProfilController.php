@@ -30,9 +30,10 @@ class ProfilController extends CI_Controller
 		$this->load->view('frontend/templates/footer');
 	}
 	public function detailPesanan($id){
+		$pesanan = $this->BayarModel->lihat_keranjang_faktur_by_id($id,$this->session->userdata('session_id'))->row_array();
 		$data = array(
-			'pesanan' => $this->BayarModel->lihat_keranjang_faktur_by_id($id,$this->session->userdata('session_id'))->row_array(),
-			'spanduk' => $this->BayarModel->lihat_keranjang_spanduk($this->session->userdata('session_id'),'bayar_menunggu')->result_array(),
+			'pesanan' => $pesanan,
+			'spanduk' => $this->BayarModel->lihat_keranjang_spanduk($this->session->userdata('session_id'),'bayar_menunggu',$pesanan['keranjang_id'])->result_array(),
 			'stiker' => null,
 			'kartu' => null,
 			'brosur' => null,

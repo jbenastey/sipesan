@@ -43,7 +43,7 @@
 						<td>Nomor HP </td>
 						<td> : </td>
 						<td>&nbsp;
-							<?= $this->session->userdata('session_nama')?>
+							<?= $this->session->userdata('session_nomor_hp')?>
 						</td>
 					</tr>
 					<tr>
@@ -66,7 +66,7 @@
 							<?php elseif ($pesanan['faktur_status'] == 'sudah'):?>
 								<label class="label label-success">Lunas</label>
 							<?php elseif ($pesanan['faktur_status'] == 'tunggu'):?>
-								<label class="label label-primary">Lunas</label>
+								<label class="label label-success">Lunas</label>
 							<?php endif;?>
 						</td>
 						<td style="float: right"><b>Total Pembayaran : Rp. <?=nominal($pesanan['keranjang_total'])?></b></td>
