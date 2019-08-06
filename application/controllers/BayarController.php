@@ -16,9 +16,10 @@ class BayarController extends CI_Controller{
 		}
 	}
 	public function keranjang(){
+		$keranjang = $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'),'belum')->row_array();
 		$data = array(
-			'keranjang' => $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'),'belum')->row_array(),
-			'spanduk' => $this->BayarModel->lihat_keranjang_spanduk($this->session->userdata('session_id'),'belum')->result_array(),
+			'keranjang' => $keranjang,
+			'spanduk' => $this->BayarModel->lihat_keranjang_spanduk($this->session->userdata('session_id'),'belum',$keranjang['keranjang_id'])->result_array(),
 		);
 		$this->load->view('frontend/templates/header');
 		$this->load->view('frontend/pembayaran/keranjang',$data);
