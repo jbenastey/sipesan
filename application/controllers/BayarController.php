@@ -20,8 +20,9 @@ class BayarController extends CI_Controller{
 		$data = array(
 			'keranjang' => $keranjang,
 			'spanduk' => $this->BayarModel->lihat_keranjang_spanduk($this->session->userdata('session_id'),'belum',$keranjang['keranjang_id'])->result_array(),
+			'title' => 'Keranjang | Surya Madani Digital Printing'
 		);
-		$this->load->view('frontend/templates/header');
+		$this->load->view('frontend/templates/header',$data);
 		$this->load->view('frontend/pembayaran/keranjang',$data);
 		$this->load->view('frontend/templates/footer');
 	}
@@ -47,8 +48,9 @@ class BayarController extends CI_Controller{
 			'stiker' => null,
 			'kartu' => null,
 			'brosur' => null,
+			'title' => 'Pembayaran | Surya Madani Digital Printing'
 		);
-		$this->load->view('frontend/templates/header');
+		$this->load->view('frontend/templates/header',$data);
 		$this->load->view('frontend/pembayaran/bayar',$data);
 		$this->load->view('frontend/templates/footer');
 	}
@@ -60,8 +62,9 @@ class BayarController extends CI_Controller{
 		$data = array(
 			'bank' => $dataBank[$bank],
 			'pesanan' => $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'),'bayar_menunggu')->row_array(),
+			'title' => 'Terima Kasih | Surya Madani Digital Printing'
 		);
-		$this->load->view('frontend/templates/header');
+		$this->load->view('frontend/templates/header',$data);
 		$this->load->view('frontend/pembayaran/selesai',$data);
 		$this->load->view('frontend/templates/footer');
 	}
@@ -103,9 +106,10 @@ class BayarController extends CI_Controller{
 			}
 		} else {
 			$data = array(
+				'title' => 'Konfirmasi Pembayaran | Surya Madani Digital Printing',
 				'pesanan' => $this->BayarModel->lihat_keranjang_faktur_by_id($id,$this->session->userdata('session_id'),'belum')->row_array(),
 			);
-			$this->load->view('frontend/templates/header');
+			$this->load->view('frontend/templates/header',$data);
 			$this->load->view('frontend/pembayaran/konfirmasi',$data);
 			$this->load->view('frontend/templates/footer');
 		}

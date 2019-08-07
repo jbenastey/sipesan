@@ -44,7 +44,10 @@ class AuthController extends CI_Controller {
 				redirect(base_url('login'));
 			}
 		} else {
-			$this->load->view('frontend/templates/header');
+			$data = array(
+				'title' => 'Login | Surya Madani Digital Printing'
+			);
+			$this->load->view('frontend/templates/header',$data);
 			$this->load->view('frontend/auth/login');
 			$this->load->view('frontend/templates/footer');
 		}

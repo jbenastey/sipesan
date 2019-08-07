@@ -94,7 +94,10 @@ class PesanController extends CI_Controller
 				}
 			}
 		}
-		$this->load->view('frontend/templates/header');
+		$data = array(
+			'title' => 'Pesan Spanduk | Surya Madani Digital Printing'
+		);
+		$this->load->view('frontend/templates/header',$data);
 		$this->load->view('frontend/pesanan/spanduk');
 		$this->load->view('frontend/templates/footer');
 	}
