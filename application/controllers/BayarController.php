@@ -43,9 +43,10 @@ class BayarController extends CI_Controller{
 			$this->session->set_flashdata('alert', 'bayar_sukses');
 			redirect('selesai/'.$bank);
 		}
+		$pesanan = $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'),'belum')->row_array();
 		$data = array(
-			'pesanan' => $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'),'belum')->row_array(),
-			'spanduk' => $this->BayarModel->lihat_keranjang_spanduk($this->session->userdata('session_id'),'belum')->result_array(),
+			'pesanan' => $pesanan,
+			'spanduk' => $this->BayarModel->lihat_keranjang_spanduk($this->session->userdata('session_id'),'belum',$pesanan['keranjang_id'])->result_array(),
 			'stiker' => null,
 			'kartu' => null,
 			'brosur' => null,
