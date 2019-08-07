@@ -1,6 +1,10 @@
 $(document).ready(function () {
 	var root = window.location.origin + '/sipesan/';
 
+	setTimeout(function () {
+	$('.hide-it').addClass('fadeOutUpBig')
+	},5000);
+
 });
 
 function showTotal() {

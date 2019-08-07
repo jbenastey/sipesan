@@ -355,7 +355,7 @@
 										Profil Saya</a></li>
 								<li><a href="<?= base_url('pesanan') ?>"><i class="fa fa-list" style="width: 20%"></i>
 										Data Pesanan</a></li>
-								<li><a href="<?= base_url('logout') ?>"><i class="fa fa-sign-out"
+								<li><a href="<?= base_url('logout') ?>" onclick="return confirm('Logout? ')"><i class="fa fa-sign-out"
 																		   style="width: 20%"></i> Logout</a></li>
 							</ul>
 						</li>
@@ -382,3 +382,42 @@
 			</div>
 		</div>
 	</nav>
+	<div class="alert-parent">
+		<?php if ($this->session->flashdata('alert') == 'login_sukses') : ?>
+		<div class="alert-success animated fadeInDownBig hide-it">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			<i class="fa fa-check"></i> Berhasil Login
+		</div>
+		<?php elseif ($this->session->flashdata('alert') == 'login_gagal') : ?>
+		<div class="alert-danger animated fadeInDownBig hide-it">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			<i class="fa fa-warning"></i> Username atau password salah
+		</div>
+		<?php elseif ($this->session->flashdata('alert') == 'belum_login') : ?>
+		<div class="alert-danger animated fadeInDownBig hide-it">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			<i class="fa fa-warning"></i> Silahkan Login Dahulu
+		</div>
+		<?php elseif ($this->session->flashdata('alert') == 'logout_sukses') : ?>
+		<div class="alert-success animated fadeInDownBig hide-it">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			<i class="fa fa-check"></i> Berhasil Logout
+		</div>
+		<?php elseif ($this->session->flashdata('alert') == 'bayar_sukses') : ?>
+		<div class="alert-success animated fadeInDownBig hide-it">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			<i class="fa fa-check"></i> Berhasil Melakukan Pembayaran
+		</div>
+		<?php elseif ($this->session->flashdata('alert') == 'konfirmasi_sukses') : ?>
+		<div class="alert-success animated fadeInDownBig hide-it">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			<i class="fa fa-check"></i> Berhasil Melakukan Konfirmasi
+		</div>
+		<?php elseif ($this->session->flashdata('alert') == 'pesan_sukses') : ?>
+		<div class="alert-success animated fadeInDownBig hide-it">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			<i class="fa fa-check"></i> Berhasil Melakukan Pemesanan
+		</div>
+		<?php endif;?>
+	</div>
+

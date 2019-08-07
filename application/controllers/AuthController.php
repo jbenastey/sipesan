@@ -56,6 +56,7 @@ class AuthController extends CI_Controller {
 	public function logout()
 	{
 		$this->session->sess_destroy();
+		$this->session->set_flashdata('alert', 'logout_sukses');
 		redirect(base_url());
 	}
 }

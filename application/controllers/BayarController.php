@@ -40,6 +40,7 @@ class BayarController extends CI_Controller{
 			);
 			$this->BayarModel->update_keranjang($id,$dataBayar);
 			$this->BayarModel->simpan_faktur($dataFaktur);
+			$this->session->set_flashdata('alert', 'bayar_sukses');
 			redirect('selesai/'.$bank);
 		}
 		$data = array(
@@ -102,6 +103,7 @@ class BayarController extends CI_Controller{
 
 				$this->BayarModel->simpan_konfirmasi($data);
 				$this->BayarModel->update_faktur($id,$dataFaktur);
+				$this->session->set_flashdata('alert', 'konfirmasi_sukses');
 				redirect('pesanan');
 			}
 		} else {

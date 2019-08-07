@@ -68,6 +68,7 @@ class PesanController extends CI_Controller
 					);
 					$this->PesanModel->simpan_spanduk($dataSpanduk);
 					$this->BayarModel->simpan_keranjang($dataCart);
+					$this->session->set_flashdata('alert', 'pesan_sukses');
 					redirect('spanduk');
 				} else {
 					if ($undoneCart != null){
@@ -78,6 +79,7 @@ class PesanController extends CI_Controller
 
 						$this->PesanModel->simpan_spanduk($dataSpanduk);
 						$this->BayarModel->update_keranjang($cartId,$dataCart);
+						$this->session->set_flashdata('alert', 'pesan_sukses');
 						redirect('spanduk');
 					} else {
 						$cartId = 'CRT-' . substr(time(), 5);
@@ -89,6 +91,7 @@ class PesanController extends CI_Controller
 						);
 						$this->PesanModel->simpan_spanduk($dataSpanduk);
 						$this->BayarModel->simpan_keranjang($dataCart);
+						$this->session->set_flashdata('alert', 'pesan_sukses');
 						redirect('spanduk');
 					}
 				}
