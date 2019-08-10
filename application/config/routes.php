@@ -77,6 +77,10 @@ $route['admin/transaksi'] = 'backend/TransaksiController';
 $route['admin/transaksi/lihat/(:any)'] = 'backend/TransaksiController/lihat/$1';
 $route['admin/transaksi/konfirmasi/(:any)'] = 'backend/TransaksiController/konfirmasi/$1';
 
+$route['admin/pesanan'] = 'backend/PesananController';
+$route['admin/pesanan/lihat/(:any)'] = 'backend/PesananController/lihat/$1';
+$route['admin/pesanan/foto/(:any)'] = 'backend/PesananController/foto/$1';
+
 //$route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

@@ -241,96 +241,12 @@
 								class="drop-caret" data-toggle="dropdown"></i></a>
 						<ul class="dropdown-menu dropdown-menu-category">
 							<li><a href="#"><i class="fa fa-sticky-note dropdown-menu-category-icon"></i>Stiker</a>
-								<div class="dropdown-menu-category-section">
-									<div class="dropdown-menu-category-section-inner">
-										<div class="dropdown-menu-category-section-content">
-											<div class="row">
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Stiker</h5>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
-														doloribus eos eum labore laborum maxime odio odit placeat
-														repellendus reprehenderit, sapiente similique, tenetur unde
-														velit veritatis. Error iure possimus veniam!</p>
-													<a class="btn btn-lg btn-primary" href="#">Pesan Stiker Sekarang <i
-															class="fa fa-caret-right"></i></a>
-												</div>
-											</div>
-										</div>
-										<img class="dropdown-menu-category-section-theme-img"
-											 src="<?= base_url() ?>assets/frontend/img/sipesan/stiker.png"
-											 alt="Image Alternative text" title="Stiker"
-											 style="width: 350px; right: -10px;"/>
-									</div>
-								</div>
 							</li>
-							<li><a href="#"><i class="fa fa-photo dropdown-menu-category-icon"></i>Spanduk</a>
-								<div class="dropdown-menu-category-section">
-									<div class="dropdown-menu-category-section-inner">
-										<div class="dropdown-menu-category-section-content">
-											<div class="row">
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Spanduk</h5>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
-														doloribus eos eum labore laborum maxime odio odit placeat
-														repellendus reprehenderit, sapiente similique, tenetur unde
-														velit veritatis. Error iure possimus veniam!</p>
-													<a class="btn btn-lg btn-primary" href="<?= base_url('spanduk') ?>">Pesan
-														Spanduk Sekarang <i class="fa fa-caret-right"></i></a>
-												</div>
-											</div>
-										</div>
-										<img class="dropdown-menu-category-section-theme-img"
-											 src="<?= base_url() ?>assets/frontend/img/sipesan/spanduk.png"
-											 alt="Image Alternative text" title="Spanduk"
-											 style="width: 350px;right: -10px; bottom: -10px;"/>
-									</div>
-								</div>
+							<li><a href="<?= base_url('spanduk') ?>"><i class="fa fa-photo dropdown-menu-category-icon"></i>Spanduk</a>
 							</li>
 							<li><a href="#"><i class="fa fa-id-card dropdown-menu-category-icon"></i>Kartu Nama</a>
-								<div class="dropdown-menu-category-section">
-									<div class="dropdown-menu-category-section-inner">
-										<div class="dropdown-menu-category-section-content">
-											<div class="row">
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Kartu Nama</h5>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
-														doloribus eos eum labore laborum maxime odio odit placeat
-														repellendus reprehenderit, sapiente similique, tenetur unde
-														velit veritatis. Error iure possimus veniam!</p>
-													<a class="btn btn-lg btn-primary" href="#">Pesan Kartu Nama Sekarang
-														<i class="fa fa-caret-right"></i></a>
-												</div>
-											</div>
-										</div>
-										<img class="dropdown-menu-category-section-theme-img"
-											 src="<?= base_url() ?>assets/frontend/img/sipesan/kartunama.png"
-											 alt="Image Alternative text" title="Kartu Nama"
-											 style="width: 350px; right: -30px"/>
-									</div>
-								</div>
 							</li>
 							<li><a href="#"><i class="fa fa-file-image-o dropdown-menu-category-icon"></i>Brosur</a>
-								<div class="dropdown-menu-category-section">
-									<div class="dropdown-menu-category-section-inner">
-										<div class="dropdown-menu-category-section-content">
-											<div class="row">
-												<div class="col-md-6">
-													<h5 class="dropdown-menu-category-title">Brosur</h5>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
-														doloribus eos eum labore laborum maxime odio odit placeat
-														repellendus reprehenderit, sapiente similique, tenetur unde
-														velit veritatis. Error iure possimus veniam!</p>
-													<a class="btn btn-lg btn-primary" href="#">Pesan Brosur Sekarang <i
-															class="fa fa-caret-right"></i></a>
-												</div>
-											</div>
-										</div>
-										<img class="dropdown-menu-category-section-theme-img"
-											 src="<?= base_url() ?>assets/frontend/img/sipesan/brosur.png"
-											 alt="Image Alternative text" title="Brosur"
-											 style="width: 350px; right: -10px"/>
-									</div>
-								</div>
 							</li>
 						</ul>
 					</li>

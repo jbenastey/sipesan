@@ -13,4 +13,8 @@ class PesanModel extends CI_Model
 		$this->db->insert('sipesan_spanduk',$data);
 		return $this->db->affected_rows();
 	}
+	public function lihat_spanduk_by_id($id){
+		$this->db->where('spanduk_id',$id);
+		return $this->db->get('sipesan_spanduk')->row_array();
+	}
 }

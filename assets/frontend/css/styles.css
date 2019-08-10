@@ -472,8 +472,7 @@ hr {
   filter: alpha(opacity=30);
 }
 .dropdown-menu-category-section {
-  width: 600px;
-  height: 491px;
+	border-radius: 5px;
   position: absolute;
   top: 0;
   left: 230px;

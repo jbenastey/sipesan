@@ -89,10 +89,7 @@
 							</div>
 							<div class="profile-name">
 								<p class="name">
-									Marina Michel
-								</p>
-								<p class="designation">
-									Super Admin
+									Administrator
 								</p>
 							</div>
 						</div>
@@ -116,7 +113,13 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=base_url('admin')?>x`">
+						<a class="nav-link" href="<?=base_url('admin/pesanan')?>">
+							<i class="fa fa-envelope-open-o menu-icon"></i>
+							<span class="menu-title">Data Pesanan</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="<?=base_url('admin')?>">
 							<i class="icon-docs menu-icon"></i>
 							<span class="menu-title">Laporan</span>
 						</a>
