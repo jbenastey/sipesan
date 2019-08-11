@@ -32,9 +32,9 @@ class TransaksiController extends CI_Controller {
 			'transaksi' => $transaksi,
 			'konfirmasi' => $konfirmasi,
 			'spanduk' => $this->BayarModel->lihat_keranjang_spanduk($transaksi['keranjang_pengguna_id'],'bayar_menunggu',$transaksi['keranjang_id'])->result_array(),
-			'stiker' => null,
-			'kartu' => null,
-			'brosur' => null,
+			'stiker' => $this->BayarModel->lihat_keranjang_stiker($transaksi['keranjang_pengguna_id'],'bayar_menunggu',$transaksi['keranjang_id'])->result_array(),
+			'kartu' => $this->BayarModel->lihat_keranjang_kartu($transaksi['keranjang_pengguna_id'],'bayar_menunggu',$transaksi['keranjang_id'])->result_array(),
+			'brosur' => $this->BayarModel->lihat_keranjang_brosur($transaksi['keranjang_pengguna_id'],'bayar_menunggu',$transaksi['keranjang_id'])->result_array(),
 		);
 		$this->load->view('backend/templates/header');
 		$this->load->view('backend/transaksi/lihat',$data);

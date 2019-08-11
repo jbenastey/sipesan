@@ -34,9 +34,9 @@ class PesananController extends CI_Controller
 			'transaksi' => $transaksi,
 			'konfirmasi' => $konfirmasi,
 			'spanduk' => $this->BayarModel->lihat_keranjang_spanduk($transaksi['keranjang_pengguna_id'],'bayar_menunggu',$transaksi['keranjang_id'])->result_array(),
-			'stiker' => null,
-			'kartu' => null,
-			'brosur' => null,
+			'stiker' => $this->BayarModel->lihat_keranjang_stiker($transaksi['keranjang_pengguna_id'],'bayar_menunggu',$transaksi['keranjang_id'])->result_array(),
+			'kartu' => $this->BayarModel->lihat_keranjang_kartu($transaksi['keranjang_pengguna_id'],'bayar_menunggu',$transaksi['keranjang_id'])->result_array(),
+			'brosur' => $this->BayarModel->lihat_keranjang_brosur($transaksi['keranjang_pengguna_id'],'bayar_menunggu',$transaksi['keranjang_id'])->result_array(),
 		);
 		$this->load->view('backend/templates/header');
 		$this->load->view('backend/pesanan/lihat',$data);
@@ -44,7 +44,10 @@ class PesananController extends CI_Controller
 	}
 	public function foto($id){
 		$data = array(
-			'spanduk' => $this->PesanModel->lihat_spanduk_by_id($id)
+			'spanduk' => $this->PesanModel->lihat_spanduk_by_id($id),
+			'stiker' => $this->PesanModel->lihat_stiker_by_id($id),
+			'kartu' => $this->PesanModel->lihat_kartu_by_id($id),
+			'brosur' => $this->PesanModel->lihat_brosur_by_id($id),
 		);
 		$this->load->view('backend/templates/header');
 		$this->load->view('backend/pesanan/foto',$data);

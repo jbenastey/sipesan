@@ -71,7 +71,7 @@
 					<tr>
 						<th>Jenis</th>
 						<th>Jumlah</th>
-						<th>Harga</th>
+						<th style="text-align: right">Harga</th>
 					</tr>
 					</thead>
 					<tbody>
@@ -81,7 +81,7 @@
 							?>
 							<td>Spanduk</td>
 							<td><?= count($spanduk) ?></td>
-							<td>
+							<td style="text-align: right">
 								<?php
 								$harga = 0;
 								foreach ($spanduk as $key => $value) {
@@ -100,7 +100,7 @@
 							?>
 							<td>Stiker</td>
 							<td><?= count($stiker) ?></td>
-							<td>
+							<td style="text-align: right">
 								<?php
 								$harga = 0;
 								foreach ($stiker as $key => $value) {
@@ -113,14 +113,52 @@
 						endif;
 						?>
 					</tr>
+
+					<tr>
+						<?php
+						if ($kartu == !null):
+							?>
+							<td>Kartu Nama</td>
+							<td><?= count($kartu) ?></td>
+							<td style="text-align: right">
+								<?php
+								$harga = 0;
+								foreach ($kartu as $key => $value) {
+									$harga = $harga + $value['kartu_total'];
+								}
+								echo 'Rp. ' . nominal($harga)
+								?>
+							</td>
+						<?php
+						endif;
+						?>
+					</tr>
+					<tr>
+						<?php
+						if ($brosur == !null):
+							?>
+							<td>Brosur</td>
+							<td><?= count($brosur) ?></td>
+							<td style="text-align: right">
+								<?php
+								$harga = 0;
+								foreach ($brosur as $key => $value) {
+									$harga = $harga + $value['brosur_total'];
+								}
+								echo 'Rp. ' . nominal($harga)
+								?>
+							</td>
+						<?php
+						endif;
+						?>
+					</tr>
 					</tbody>
 					<tfoot>
 					<tr>
-						<td colspan="2">Total</td>
-						<td>Rp. <?= nominal($transaksi['keranjang_total']) ?></td>
+						<td colspan="2"><b>Total</b></td>
+						<td style="text-align: right"><b>Rp. <?= nominal($transaksi['keranjang_total']) ?></b></td>
 					</tr>
 					</tfoot>
-					</tbody>
 				</table>
 			</div>
 		</div>
@@ -176,6 +214,12 @@
 										   onclick="return confirm('Konfirmasi Pembayaran? ')"><i
 												class="fa fa-check"></i> Konfirmasi</a>
 									<?php
+									else:
+										?>
+										<div class="alert alert-success alert-dismissible animated fadeInDown round" style="" id="feedback"
+											 role="alert">
+											Pesanan sudah dikonfirmasi
+										</div><?php
 									endif;
 								else :?>
 									<button type="button" disabled class="btn btn-warning ml-2"><i

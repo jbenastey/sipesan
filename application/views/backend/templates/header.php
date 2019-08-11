@@ -6,7 +6,7 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Victory Admin</title>
+	<title>Surya Madani Digital Printing</title>
 	<!-- plugins:css -->
 	<link rel="stylesheet" href="<?=base_url()?>assets/backend/node_modules/mdi/css/materialdesignicons.min.css">
 	<link rel="stylesheet" href="<?=base_url()?>assets/backend/node_modules/simple-line-icons/css/simple-line-icons.css">
@@ -21,15 +21,15 @@
 	<!-- inject:css -->
 	<link rel="stylesheet" href="<?=base_url()?>assets/backend/css/style.css">
 	<!-- endinject -->
-	<link rel="shortcut icon" href="<?=base_url()?>assets/images/favicon.png" />
+	<link rel="shortcut icon" href="<?=base_url()?>assets/frontend/img/sipesan/print-flat.png" />
 </head>
 <body>
 <div class="container-scroller">
 	<!-- partial:partials/_navbar.html -->
-	<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+	<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row d-print-none" >
 		<div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-			<a class="navbar-brand brand-logo" href="<?=base_url('')?>"><img src="<?=base_url()?>assets/backend/images/logo.svg" alt="logo"/></a>
-			<a class="navbar-brand brand-logo-mini" href="<?=base_url('')?>"><img src="<?=base_url()?>assets/backend/images/logo-mini.svg" alt="logo"/></a>
+			<a class="navbar-brand brand-logo" href="<?=base_url('admin')?>"><img src="<?=base_url()?>assets/frontend/img/sipesan/print-flat.png" style="width: 12%" alt="logo"/></a>
+			<a class="navbar-brand brand-logo-mini" href="<?=base_url('admin')?>"><img src="<?=base_url()?>assets/frontend/img/sipesan/print-flat.png" alt="logo"/></a>
 		</div>
 		<div class="navbar-menu-wrapper d-flex align-items-center">
 			<button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -37,7 +37,7 @@
 			</button>
 			<ul class="navbar-nav navbar-nav-right">
 				<li class="nav-item nav-settings d-none d-lg-block">
-					<a class="nav-link" href="<?php echo base_url() ?>admin" title="Profil">
+					<a class="nav-link" href="<?php echo base_url('admin') ?>admin" title="Profil">
 						<i class="icon-user"></i>
 					</a>
 				</li>
@@ -79,14 +79,13 @@
 			</div>
 			<!-- partial -->
 			<!-- partial:partials/_sidebar.html -->
-			<nav class="sidebar sidebar-offcanvas" id="sidebar">
+			<nav class="sidebar sidebar-offcanvas d-print-none" id="sidebar">
 				<ul class="nav">
 					<li class="nav-item nav-profile">
 						<div class="nav-link">
 							<div class="profile-image">
-								<img src="<?=base_url()?>assets/backend/images/faces/face10.jpg" alt="image"/>
-								<span class="online-status online"></span> <!--change class online to offline or busy as needed-->
-							</div>
+								<img src="<?=base_url()?>assets/backend/images/user.png" alt="image"/>
+								</div>
 							<div class="profile-name">
 								<p class="name">
 									Administrator
@@ -119,10 +118,18 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?=base_url('admin')?>">
+						<a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
 							<i class="icon-docs menu-icon"></i>
 							<span class="menu-title">Laporan</span>
 						</a>
+						<div class="collapse" id="ui-basic">
+							<ul class="nav flex-column sub-menu">
+								<li class="nav-item"> <a class="nav-link" href="<?=base_url('admin/laporan/spanduk')?>">Spanduk</a></li>
+								<li class="nav-item"> <a class="nav-link" href="<?=base_url('admin/laporan/stiker')?>">Stiker</a></li>
+								<li class="nav-item"> <a class="nav-link" href="<?=base_url('admin/laporan/kartu')?>">Kartu Nama</a></li>
+								<li class="nav-item"> <a class="nav-link" href="<?=base_url('admin/laporan/brosur')?>">Brosur</a></li>
+							</ul>
+						</div>
 					</li>
 				</ul>
 			</nav>

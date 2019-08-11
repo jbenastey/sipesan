@@ -84,6 +84,8 @@ $route['admin/pesanan'] = 'backend/PesananController';
 $route['admin/pesanan/lihat/(:any)'] = 'backend/PesananController/lihat/$1';
 $route['admin/pesanan/foto/(:any)'] = 'backend/PesananController/foto/$1';
 
+$route['admin/laporan/(:any)'] = 'backend/LaporanController/index/$1';
+
 //$route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

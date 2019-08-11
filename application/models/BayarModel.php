@@ -65,6 +65,42 @@ class BayarModel extends CI_Model
 		$this->db->where('keranjang_status', $status);
 		return $this->db->get();
 	}
+	public function lihat_keranjang_spanduk_admin($status,$tanggal){
+		$this->db->from('sipesan_spanduk');
+		$this->db->join('sipesan_keranjang', 'sipesan_keranjang.keranjang_id = sipesan_spanduk.spanduk_keranjang_id');
+		$this->db->join('sipesan_faktur', 'sipesan_faktur.faktur_keranjang_id = sipesan_keranjang.keranjang_id');
+		$this->db->join('sipesan_pengguna', 'sipesan_pengguna.pengguna_id = sipesan_keranjang.keranjang_pengguna_id');
+		$this->db->like('faktur_date_created',$tanggal);
+		$this->db->where('keranjang_status', $status);
+		return $this->db->get();
+	}
+	public function lihat_keranjang_stiker_admin($status,$tanggal){
+		$this->db->from('sipesan_stiker');
+		$this->db->join('sipesan_keranjang', 'sipesan_keranjang.keranjang_id = sipesan_stiker.stiker_keranjang_id');
+		$this->db->join('sipesan_faktur', 'sipesan_faktur.faktur_keranjang_id = sipesan_keranjang.keranjang_id');
+		$this->db->join('sipesan_pengguna', 'sipesan_pengguna.pengguna_id = sipesan_keranjang.keranjang_pengguna_id');
+		$this->db->like('faktur_date_created',$tanggal);
+		$this->db->where('keranjang_status', $status);
+		return $this->db->get();
+	}
+	public function lihat_keranjang_kartu_admin($status,$tanggal){
+		$this->db->from('sipesan_kartu');
+		$this->db->join('sipesan_keranjang', 'sipesan_keranjang.keranjang_id = sipesan_kartu.kartu_keranjang_id');
+		$this->db->join('sipesan_faktur', 'sipesan_faktur.faktur_keranjang_id = sipesan_keranjang.keranjang_id');
+		$this->db->join('sipesan_pengguna', 'sipesan_pengguna.pengguna_id = sipesan_keranjang.keranjang_pengguna_id');
+		$this->db->like('faktur_date_created',$tanggal);
+		$this->db->where('keranjang_status', $status);
+		return $this->db->get();
+	}
+	public function lihat_keranjang_brosur_admin($status,$tanggal){
+		$this->db->from('sipesan_brosur');
+		$this->db->join('sipesan_keranjang', 'sipesan_keranjang.keranjang_id = sipesan_brosur.brosur_keranjang_id');
+		$this->db->join('sipesan_faktur', 'sipesan_faktur.faktur_keranjang_id = sipesan_keranjang.keranjang_id');
+		$this->db->join('sipesan_pengguna', 'sipesan_pengguna.pengguna_id = sipesan_keranjang.keranjang_pengguna_id');
+		$this->db->like('faktur_date_created',$tanggal);
+		$this->db->where('keranjang_status', $status);
+		return $this->db->get();
+	}
 	public function lihat_keranjang_faktur($pengguna_id){
 		$this->db->from('sipesan_keranjang');
 		$this->db->order_by('keranjang_date_created','DESC');
@@ -74,6 +110,7 @@ class BayarModel extends CI_Model
 	}
 	public function lihat_keranjang_faktur_admin(){
 		$this->db->from('sipesan_keranjang');
+		$this->db->order_by('keranjang_date_created','DESC');
 		$this->db->join('sipesan_faktur', 'sipesan_faktur.faktur_keranjang_id = sipesan_keranjang.keranjang_id');
 		$this->db->join('sipesan_pengguna', 'sipesan_pengguna.pengguna_id = sipesan_keranjang.keranjang_pengguna_id');
 		return $this->db->get();

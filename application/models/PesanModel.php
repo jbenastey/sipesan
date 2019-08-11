@@ -21,12 +21,24 @@ class PesanModel extends CI_Model
 		$this->db->insert('sipesan_stiker',$data);
 		return $this->db->affected_rows();
 	}
+	public function lihat_stiker_by_id($id){
+		$this->db->where('stiker_id',$id);
+		return $this->db->get('sipesan_stiker')->row_array();
+	}
 	public function simpan_kartu($data){
 		$this->db->insert('sipesan_kartu',$data);
 		return $this->db->affected_rows();
 	}
+	public function lihat_kartu_by_id($id){
+		$this->db->where('kartu_id',$id);
+		return $this->db->get('sipesan_kartu')->row_array();
+	}
 	public function simpan_brosur($data){
 		$this->db->insert('sipesan_brosur',$data);
 		return $this->db->affected_rows();
+	}
+	public function lihat_brosur_by_id($id){
+		$this->db->where('brosur_id',$id);
+		return $this->db->get('sipesan_brosur')->row_array();
 	}
 }

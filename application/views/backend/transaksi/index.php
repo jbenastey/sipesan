@@ -2,7 +2,7 @@
 	<div class="card">
 		<div class="card-body">
 			<h4 class="card-title">
-				Data Pelanggan
+				Data Transaksi
 			</h4>
 			<div class="table-responsive">
 				<table id="order-listing" class="table table-bordered">
