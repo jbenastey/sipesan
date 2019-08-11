@@ -7,25 +7,88 @@ if ($keranjang == !null):
 		</header>
 		<div class="row">
 			<div class="col-md-10">
-				<!--			<h4>Stiker</h4>-->
-				<!--			<table class="table table-shopping-cart">-->
-				<!--				<thead>-->
-				<!--				<tr>-->
-				<!--					<th>Foto</th>-->
-				<!--					<th>Panjang</th>-->
-				<!--					<th>Lebar</th>-->
-				<!--					<th>Bahan</th>-->
-				<!--					<th>Jumlah</th>-->
-				<!--					<th>Estimasi</th>-->
-				<!--					<th>Total</th>-->
-				<!--				</tr>-->
-				<!--				</thead>-->
-				<!--				<tbody>-->
-				<!---->
-				<!--				</tbody>-->
-				<!--			</table>-->
-				<!--			<div class="gap gap-small"></div>-->
+				<?php
+				if ($stiker != null):
+				?>
+				<h4>Stiker</h4>
+				<table class="table table-bordered table-shopping-cart">
+					<thead>
+					<tr>
+						<th>Foto</th>
+						<th>Panjang</th>
+						<th>Lebar</th>
+						<th>Bahan</th>
+						<th>Jumlah</th>
+						<th>Estimasi</th>
+						<th>Total</th>
+					</tr>
+					</thead>
+					<tbody>
+					<?php
+					foreach ($stiker as $key => $value):
+						?>
+						<tr>
+							<td><img src="<?= base_url('assets/images/stiker/') . $value['stiker_foto'] ?>" alt="foto"
+									 style="width: 100%"></td>
+							<td><?= $value['stiker_panjang'] ?> m</td>
+							<td><?= $value['stiker_lebar'] ?> m</td>
+							<td><?= $value['stiker_bahan'] ?></td>
+							<td><?= $value['stiker_jumlah'] ?> </td>
+							<td><?= $value['stiker_estimasi'] ?> Hari</td>
+							<td style="text-align: right"> Rp.<?= nominal($value['stiker_total']) ?></td>
+						</tr>
+					<?php
+					endforeach;
+					?>
+					</tbody>
+				</table>
+				<div class="gap gap-small"></div>
+				<?php
+				endif;
+				?>
+				<?php
+				if ($spanduk != null):
+				?>
 				<h4>Spanduk</h4>
+				<table class="table table-bordered table-shopping-cart">
+					<thead>
+					<tr>
+						<th>Foto</th>
+						<th>Panjang</th>
+						<th>Lebar</th>
+						<th>Bahan</th>
+						<th>Jumlah</th>
+						<th>Estimasi</th>
+						<th>Total</th>
+					</tr>
+					</thead>
+					<tbody>
+					<?php
+					foreach ($spanduk as $key => $value):
+						?>
+						<tr>
+							<td><img src="<?= base_url('assets/images/spanduk/') . $value['spanduk_foto'] ?>" alt="foto"
+									 style="width: 100%"></td>
+							<td><?= $value['spanduk_panjang'] ?> m</td>
+							<td><?= $value['spanduk_lebar'] ?> m</td>
+							<td><?= $value['spanduk_bahan'] ?></td>
+							<td><?= $value['spanduk_jumlah'] ?> </td>
+							<td><?= $value['spanduk_estimasi'] ?> Hari</td>
+							<td style="text-align: right"> Rp.<?= nominal($value['spanduk_total']) ?></td>
+						</tr>
+					<?php
+					endforeach;
+					?>
+					</tbody>
+				</table>
+				<div class="gap gap-small"></div>
+				<?php
+				endif;
+				?>
+				<?php
+				if ($kartu != null):
+				?>
+				<h4>Kartu Nama</h4>
 				<table class="table table-bordered table-shopping-cart">
 					<thead>
 					<tr>
@@ -58,6 +121,9 @@ if ($keranjang == !null):
 					</tbody>
 				</table>
 				<div class="gap gap-small"></div>
+				<?php
+				endif;
+				?>
 			</div>
 			<div class="col-md-2">
 				<h4>Total</h4>

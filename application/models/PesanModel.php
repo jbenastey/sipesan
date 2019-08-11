@@ -17,4 +17,8 @@ class PesanModel extends CI_Model
 		$this->db->where('spanduk_id',$id);
 		return $this->db->get('sipesan_spanduk')->row_array();
 	}
+	public function simpan_stiker($data){
+		$this->db->insert('sipesan_stiker',$data);
+		return $this->db->affected_rows();
+	}
 }

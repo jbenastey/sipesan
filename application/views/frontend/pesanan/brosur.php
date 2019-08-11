@@ -1,12 +1,12 @@
 <div class="container">
 	<header class="page-header">
-		<h1 class="page-title">Pesan Spanduk</h1>
+		<h1 class="page-title">Pesan Brosur</h1>
 		<ol class="breadcrumb page-breadcrumb">
 			<li><a href="#">Home</a>
 			</li>
 			<li><a href="#">Pesan</a>
 			</li>
-			<li class="active">Spanduk</li>
+			<li class="active">Brosur</li>
 		</ol>
 	</header>
 	<div class="row">

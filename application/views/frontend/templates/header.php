@@ -240,13 +240,13 @@
 					<li class="dropdown"><a href="#"><i class="fa fa-reorder"></i>&nbsp; Pesan Sekarang<i
 								class="drop-caret" data-toggle="dropdown"></i></a>
 						<ul class="dropdown-menu dropdown-menu-category">
-							<li><a href="#"><i class="fa fa-sticky-note dropdown-menu-category-icon"></i>Stiker</a>
+							<li><a href="<?= base_url('stiker') ?>"><i class="fa fa-sticky-note dropdown-menu-category-icon"></i>Stiker</a>
 							</li>
 							<li><a href="<?= base_url('spanduk') ?>"><i class="fa fa-photo dropdown-menu-category-icon"></i>Spanduk</a>
 							</li>
-							<li><a href="#"><i class="fa fa-id-card dropdown-menu-category-icon"></i>Kartu Nama</a>
+							<li><a href="<?= base_url('kartu') ?>"><i class="fa fa-id-card dropdown-menu-category-icon"></i>Kartu Nama</a>
 							</li>
-							<li><a href="#"><i class="fa fa-file-image-o dropdown-menu-category-icon"></i>Brosur</a>
+							<li><a href="<?= base_url('brosur') ?>"><i class="fa fa-file-image-o dropdown-menu-category-icon"></i>Brosur</a>
 							</li>
 						</ul>
 					</li>

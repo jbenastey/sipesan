@@ -56,6 +56,9 @@ $route['login'] = 'AuthController/login';
 $route['logout'] = 'AuthController/logout';
 
 $route['spanduk'] = 'PesanController/pesanSpanduk';
+$route['stiker'] = 'PesanController/pesanStiker';
+$route['kartu'] = 'PesanController/pesanKartu';
+$route['brosur'] = 'PesanController/pesanBrosur';
 
 $route['keranjang'] = 'BayarController/keranjang';
 $route['bayar/(:any)'] = 'BayarController/bayar/$1';

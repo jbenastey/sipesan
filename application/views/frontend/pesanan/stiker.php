@@ -1,16 +1,16 @@
 <div class="container">
 	<header class="page-header">
-		<h1 class="page-title">Pesan Spanduk</h1>
+		<h1 class="page-title">Pesan Stiker</h1>
 		<ol class="breadcrumb page-breadcrumb">
 			<li><a href="#">Home</a>
 			</li>
 			<li><a href="#">Pesan</a>
 			</li>
-			<li class="active">Spanduk</li>
+			<li class="active">Stiker</li>
 		</ol>
 	</header>
 	<div class="row">
-		<?= form_open('spanduk' , array('enctype' => 'multipart/form-data')) ?>
+		<?= form_open('stiker' , array('enctype' => 'multipart/form-data')) ?>
 		<div class="col-md-5">
 			<h4>Upload Gambar</h4>
 			<div class="product-page-product-wrap">
@@ -48,14 +48,13 @@
 						<div class="form-group">
 							<label for="">Tipe Bahan<span style="color: red">*</span> :</label><br>
 							<select name="bahan" id="bahan" class="form-control" required>
-								<option value="Biasa">280g (Biasa)</option>
-								<option value="Menengah">320g (Menengah)</option>
-								<option value="Bagus">340g (Bagus)</option>
+								<option value="biasa">Biasa (China)</option>
+								<option value="bagus">Bagus (Ritrama)</option>
 							</select>
 						</div>
 						<div class="form-group">
 							<label for="">Jumlah (pcs) :</label>
-							<input type="number" name="jumlah" class="form-control" id="jumlah" onkeyup="showTotal()"
+							<input type="number" name="jumlah" class="form-control" id="jumlah" onkeyup="showTotalStiker()"
 								   required autocomplete="off">
 						</div>
 						<div class="form-group">
@@ -66,9 +65,8 @@
 						<div class="form-group">
 							<label for=""><span style="color: red">*</span>Keterangan :</label>
 							<ul>
-								<li>280g (Biasa) : Rp. 20.000 per meter</li>
-								<li>320g (Menengah) : Rp. 30.000 per meter</li>
-								<li>340g (Bagus) : Rp. 35.000 per meter</li>
+								<li>Biasa (China) : Rp. 75.000 per meter</li>
+								<li>Bagus (Ritrama) : Rp. 95.000 per meter</li>
 							</ul>
 						</div>
 					</div>

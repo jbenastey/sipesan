@@ -33,6 +33,27 @@ function showTotal() {
 	}
 }
 
+function showTotalStiker() {
+	var panjang = $('#panjang').val();
+	var lebar = $('#lebar').val();
+	var bahan = $('#bahan').val();
+	var jumlah = $('#jumlah').val();
+	var luas = parseInt(panjang) * parseInt(lebar);
+	var total = 0;
+	var html = '';
+	if (bahan === 'biasa'){
+		total = luas * jumlah * 75000;
+		html = '' +
+			'<h3> Rp. '+formatRupiah(total.toString())+'</h3>';
+		$('#total').html(html);
+	}  else if (bahan === 'bagus'){
+		total = luas * jumlah * 95000;
+		html = '' +
+			'<h3> Rp. '+formatRupiah(total.toString())+'</h3>';
+		$('#total').html(html);
+	}
+}
+
 // ------------------------------------------------------------------------------------------
 // Fungsi-fungsi
 // ------------------------------------------------------------------------------------------

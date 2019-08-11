@@ -34,6 +34,14 @@ class BayarModel extends CI_Model
 		$this->db->where('keranjang_status', $status);
 		return $this->db->get();
 	}
+	public function lihat_keranjang_stiker($pengguna_id,$status,$keranjang_id){
+		$this->db->from('sipesan_stiker');
+		$this->db->join('sipesan_keranjang', 'sipesan_keranjang.keranjang_id = sipesan_stiker.stiker_keranjang_id');
+		$this->db->where('keranjang_pengguna_id', $pengguna_id);
+		$this->db->where('keranjang_id', $keranjang_id);
+		$this->db->where('keranjang_status', $status);
+		return $this->db->get();
+	}
 	public function lihat_keranjang_faktur($pengguna_id){
 		$this->db->from('sipesan_keranjang');
 		$this->db->join('sipesan_faktur', 'sipesan_faktur.faktur_keranjang_id = sipesan_keranjang.keranjang_id');
