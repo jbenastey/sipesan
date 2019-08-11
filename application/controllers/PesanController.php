@@ -192,6 +192,81 @@ class PesanController extends CI_Controller
 		$this->load->view('frontend/templates/footer');
 	}
 	public function pesanKartu(){
+
+		if (isset($_POST['keranjang'])) {
+			$kartuId = 'CRD-' . substr(time(), 5);
+			$bahan = $this->input->post('bahan');
+			$jumlah = $this->input->post('jumlah');
+			$estimasi = $this->input->post('estimasi');
+			$total = 0;
+			if ($bahan == 'biasa') {
+				$total =  $jumlah * 35000;
+			} elseif ($bahan == 'bagus') {
+				$total =  $jumlah * 45000;
+			}
+
+			$config['upload_path'] = './assets/images/kartu/';
+			$config['allowed_types'] = 'jpg|png|jpeg';
+			$this->load->library('upload', $config);
+			$this->upload->initialize($config);
+
+			if (!$this->upload->do_upload('upload')) {
+				$error = array('error' => $this->upload->display_errors());
+				var_dump($error);
+			} else {
+				$foto = $this->upload->data('file_name');
+
+				$dataKartu = array(
+					'kartu_id' => $kartuId,
+					'kartu_bahan' => $bahan,
+					'kartu_jumlah' => $jumlah,
+					'kartu_estimasi' => $estimasi,
+					'kartu_total' => $total,
+					'kartu_foto' => $foto,
+				);
+
+				$allCart = $this->BayarModel->lihat_keranjang();
+				$undoneCart = $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'),'belum')->row_array();
+
+				if ($allCart == null){
+					$cartId = 'CRT-' . substr(time(), 5);
+					$dataKartu['kartu_keranjang_id'] = $cartId;
+					$dataCart = array(
+						'keranjang_id' => $cartId,
+						'keranjang_pengguna_id' => $this->session->userdata('session_id'),
+						'keranjang_total' => $total,
+					);
+					$this->PesanModel->simpan_kartu($dataKartu);
+					$this->BayarModel->simpan_keranjang($dataCart);
+					$this->session->set_flashdata('alert', 'pesan_sukses');
+					redirect('kartu');
+				} else {
+					if ($undoneCart != null){
+						$cartId = $undoneCart['keranjang_id'];
+						$cartTotal = $undoneCart['keranjang_total'];
+						$dataKartu['kartu_keranjang_id'] = $cartId;
+						$dataCart['keranjang_total'] = $cartTotal + $total;
+
+						$this->PesanModel->simpan_kartu($dataKartu);
+						$this->BayarModel->update_keranjang($cartId,$dataCart);
+						$this->session->set_flashdata('alert', 'pesan_sukses');
+						redirect('kartu');
+					} else {
+						$cartId = 'CRT-' . substr(time(), 5);
+						$dataKartu['kartu_keranjang_id'] = $cartId;
+						$dataCart = array(
+							'keranjang_id' => $cartId,
+							'keranjang_pengguna_id' => $this->session->userdata('session_id'),
+							'keranjang_total' => $total,
+						);
+						$this->PesanModel->simpan_kartu($dataKartu);
+						$this->BayarModel->simpan_keranjang($dataCart);
+						$this->session->set_flashdata('alert', 'pesan_sukses');
+						redirect('kartu');
+					}
+				}
+			}
+		}
 		$data = array(
 			'title' => 'Pesan Kartu Nama | Surya Madani Digital Printing'
 		);

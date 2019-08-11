@@ -93,8 +93,6 @@ if ($keranjang == !null):
 					<thead>
 					<tr>
 						<th>Foto</th>
-						<th>Panjang</th>
-						<th>Lebar</th>
 						<th>Bahan</th>
 						<th>Jumlah</th>
 						<th>Estimasi</th>
@@ -103,17 +101,15 @@ if ($keranjang == !null):
 					</thead>
 					<tbody>
 					<?php
-					foreach ($spanduk as $key => $value):
+					foreach ($kartu as $key => $value):
 						?>
 						<tr>
-							<td><img src="<?= base_url('assets/images/spanduk/') . $value['spanduk_foto'] ?>" alt="foto"
+							<td><img src="<?= base_url('assets/images/kartu/') . $value['kartu_foto'] ?>" alt="foto"
 									 style="width: 100%"></td>
-							<td><?= $value['spanduk_panjang'] ?> cm</td>
-							<td><?= $value['spanduk_lebar'] ?> cm</td>
-							<td><?= $value['spanduk_bahan'] ?></td>
-							<td><?= $value['spanduk_jumlah'] ?> </td>
-							<td><?= $value['spanduk_estimasi'] ?> Hari</td>
-							<td style="text-align: right"> Rp.<?= nominal($value['spanduk_total']) ?></td>
+							<td><?= $value['kartu_bahan'] ?></td>
+							<td><?= $value['kartu_jumlah'] ?> </td>
+							<td><?= $value['kartu_estimasi'] ?> Hari</td>
+							<td style="text-align: right"> Rp.<?= nominal($value['kartu_total']) ?></td>
 						</tr>
 					<?php
 					endforeach;

@@ -10,7 +10,7 @@
 		</ol>
 	</header>
 	<div class="row">
-		<?= form_open('spanduk' , array('enctype' => 'multipart/form-data')) ?>
+		<?= form_open('kartu' , array('enctype' => 'multipart/form-data')) ?>
 		<div class="col-md-5">
 			<h4>Upload Gambar</h4>
 			<div class="product-page-product-wrap">
@@ -25,37 +25,15 @@
 				<div class="col-md-8">
 					<div class="box">
 						<div class="form-group">
-							<label for="">Ukuran :</label>
-							<div class="row">
-								<div class="col-md-6">
-									Panjang (m)
-								</div>
-								<div class="col-md-6">
-									Lebar (m)
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-6">
-									<input type="number" class="form-control" id="panjang" name="panjang"
-										   placeholder="Panjang" required autocomplete="off">
-								</div>
-								<div class="col-md-6">
-									<input type="number" class="form-control" id="lebar" name="lebar"
-										   placeholder="Lebar" required autocomplete="off">
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
 							<label for="">Tipe Bahan<span style="color: red">*</span> :</label><br>
 							<select name="bahan" id="bahan" class="form-control" required>
-								<option value="Biasa">280g (Biasa)</option>
-								<option value="Menengah">320g (Menengah)</option>
-								<option value="Bagus">340g (Bagus)</option>
+								<option value="biasa">Biasa (bct)</option>
+								<option value="bagus">Bagus (glossy)</option>
 							</select>
 						</div>
 						<div class="form-group">
-							<label for="">Jumlah (pcs) :</label>
-							<input type="number" name="jumlah" class="form-control" id="jumlah" onkeyup="showTotal()"
+							<label for="">Jumlah (kotak) :</label>
+							<input type="number" name="jumlah" class="form-control" id="jumlah" onkeyup="showTotalKartu()"
 								   required autocomplete="off">
 						</div>
 						<div class="form-group">
@@ -66,9 +44,8 @@
 						<div class="form-group">
 							<label for=""><span style="color: red">*</span>Keterangan :</label>
 							<ul>
-								<li>280g (Biasa) : Rp. 20.000 per meter</li>
-								<li>320g (Menengah) : Rp. 30.000 per meter</li>
-								<li>340g (Bagus) : Rp. 35.000 per meter</li>
+								<li>Biasa (bct) : Rp. 35.000 per kotak</li>
+								<li>Bagus (glossy) : Rp. 45.000 per kotak</li>
 							</ul>
 						</div>
 					</div>

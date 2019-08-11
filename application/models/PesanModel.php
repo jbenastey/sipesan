@@ -21,4 +21,8 @@ class PesanModel extends CI_Model
 		$this->db->insert('sipesan_stiker',$data);
 		return $this->db->affected_rows();
 	}
+	public function simpan_kartu($data){
+		$this->db->insert('sipesan_kartu',$data);
+		return $this->db->affected_rows();
+	}
 }

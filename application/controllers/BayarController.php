@@ -21,7 +21,7 @@ class BayarController extends CI_Controller{
 			'keranjang' => $keranjang,
 			'spanduk' => $this->BayarModel->lihat_keranjang_spanduk($this->session->userdata('session_id'),'belum',$keranjang['keranjang_id'])->result_array(),
 			'stiker' => $this->BayarModel->lihat_keranjang_stiker($this->session->userdata('session_id'),'belum',$keranjang['keranjang_id'])->result_array(),
-			'kartu' => null,
+			'kartu' => $this->BayarModel->lihat_keranjang_kartu($this->session->userdata('session_id'),'belum',$keranjang['keranjang_id'])->result_array(),
 			'brosur' => null,
 			'title' => 'Keranjang | Surya Madani Digital Printing'
 		);
