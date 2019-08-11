@@ -5,7 +5,7 @@
 		<div class="row row-col-gap" data-gutter="60">
 			<div class="col-md-3">
 				<h4 class="widget-title-sm">Tentang Kami</h4>
-				<p>Surya Madani Digital Printing melayani : digital printing dan offset, seperti cetak spanduk, sticker, banner, poster, baliho, dan one way vision.</p>
+				<p>Surya Madani Digital Printing melayani : digital printing , seperti cetak spanduk, sticker, banner, poster, dan baliho.</p>
 				<ul class="main-footer-social-list">
 					<li>
 						<a class="fa fa-facebook" href="#"></a>
@@ -30,6 +30,7 @@
 			</div>
 			<div class="col-md-3">
 				<h4 class="widget-title-sm">Kontak</h4>
+				<p>Sapriadi Arsyad S.Kom</p>
 				<p>0813-7859-0777</p>
 			</div>
 			<div class="col-md-3">
@@ -64,11 +65,6 @@
 						<td style="padding: 3px;">Sabtu</td>
 						<td style="padding: 3px;"> : </td>
 						<td style="padding: 3px;">08.00 – 18.00</td>
-					</tr>
-					<tr>
-						<td style="padding: 3px;">Minggu </td>
-						<td style="padding: 3px;"> : </td>
-						<td style="padding: 3px;">09.00 – 17.00</td>
 					</tr>
 				</table>
 			</div>

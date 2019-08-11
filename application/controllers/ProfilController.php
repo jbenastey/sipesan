@@ -39,9 +39,9 @@ class ProfilController extends CI_Controller
 			'title' => 'Detail Pesanan | Surya Madani Digital Printing',
 			'pesanan' => $pesanan,
 			'spanduk' => $this->BayarModel->lihat_keranjang_spanduk($this->session->userdata('session_id'),'bayar_menunggu',$pesanan['keranjang_id'])->result_array(),
-			'stiker' => null,
-			'kartu' => null,
-			'brosur' => null,
+			'stiker' => $this->BayarModel->lihat_keranjang_stiker($this->session->userdata('session_id'),'bayar_menunggu',$pesanan['keranjang_id'])->result_array(),
+			'kartu' => $this->BayarModel->lihat_keranjang_kartu($this->session->userdata('session_id'),'bayar_menunggu',$pesanan['keranjang_id'])->result_array(),
+			'brosur' => $this->BayarModel->lihat_keranjang_brosur($this->session->userdata('session_id'),'bayar_menunggu',$pesanan['keranjang_id'])->result_array(),
 		);
 		$this->load->view('frontend/templates/header',$data);
 		$this->load->view('frontend/profil/detail_pesanan',$data);

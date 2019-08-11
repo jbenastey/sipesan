@@ -44,29 +44,29 @@ class BayarController extends CI_Controller{
 			$this->BayarModel->update_keranjang($id,$dataBayar);
 			$this->BayarModel->simpan_faktur($dataFaktur);
 			$this->session->set_flashdata('alert', 'bayar_sukses');
-			redirect('selesai/'.$bank);
+			redirect('selesai/'.$bank.'/'.$id);
 		}
 		$pesanan = $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'),'belum')->row_array();
 		$data = array(
 			'pesanan' => $pesanan,
 			'spanduk' => $this->BayarModel->lihat_keranjang_spanduk($this->session->userdata('session_id'),'belum',$pesanan['keranjang_id'])->result_array(),
-			'stiker' => null,
-			'kartu' => null,
-			'brosur' => null,
+			'stiker' => $this->BayarModel->lihat_keranjang_stiker($this->session->userdata('session_id'),'belum',$pesanan['keranjang_id'])->result_array(),
+			'kartu' => $this->BayarModel->lihat_keranjang_kartu($this->session->userdata('session_id'),'belum',$pesanan['keranjang_id'])->result_array(),
+			'brosur' => $this->BayarModel->lihat_keranjang_brosur($this->session->userdata('session_id'),'belum',$pesanan['keranjang_id'])->result_array(),
 			'title' => 'Pembayaran | Surya Madani Digital Printing'
 		);
 		$this->load->view('frontend/templates/header',$data);
 		$this->load->view('frontend/pembayaran/bayar',$data);
 		$this->load->view('frontend/templates/footer');
 	}
-	public function selesai($bank){
+	public function selesai($bank,$id){
 		$dataBank = array(
 			'bni' => 'Bank BNI 123456789 Atas Nama Surya Madani ',
 			'bri' => 'Bank BRI 115511026 Atas Nama Surya Madani '
 		);
 		$data = array(
 			'bank' => $dataBank[$bank],
-			'pesanan' => $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'),'bayar_menunggu')->row_array(),
+			'pesanan' => $this->BayarModel->lihat_keranjang_status_selesai($this->session->userdata('session_id'),'sudah',$id)->row_array(),
 			'title' => 'Terima Kasih | Surya Madani Digital Printing'
 		);
 		$this->load->view('frontend/templates/header',$data);

@@ -123,7 +123,7 @@ if ($keranjang == !null):
 				<?php
 				if ($brosur != null):
 				?>
-				<h4>Kartu Nama</h4>
+				<h4>Brosur</h4>
 				<table class="table table-bordered table-shopping-cart">
 					<thead>
 					<tr>
