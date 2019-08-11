@@ -120,6 +120,41 @@ if ($keranjang == !null):
 				<?php
 				endif;
 				?>
+				<?php
+				if ($brosur != null):
+				?>
+				<h4>Kartu Nama</h4>
+				<table class="table table-bordered table-shopping-cart">
+					<thead>
+					<tr>
+						<th>Foto</th>
+						<th>Bahan</th>
+						<th>Jumlah</th>
+						<th>Estimasi</th>
+						<th>Total</th>
+					</tr>
+					</thead>
+					<tbody>
+					<?php
+					foreach ($brosur as $key => $value):
+						?>
+						<tr>
+							<td><img src="<?= base_url('assets/images/brosur/') . $value['brosur_foto'] ?>" alt="foto"
+									 style="width: 100%"></td>
+							<td><?= $value['brosur_bahan'] ?></td>
+							<td><?= $value['brosur_jumlah'] ?> </td>
+							<td><?= $value['brosur_estimasi'] ?> Hari</td>
+							<td style="text-align: right"> Rp.<?= nominal($value['brosur_total']) ?></td>
+						</tr>
+					<?php
+					endforeach;
+					?>
+					</tbody>
+				</table>
+				<div class="gap gap-small"></div>
+				<?php
+				endif;
+				?>
 			</div>
 			<div class="col-md-2">
 				<h4>Total</h4>

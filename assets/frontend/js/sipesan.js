@@ -72,6 +72,24 @@ function showTotalKartu() {
 	}
 }
 
+function showTotalBrosur() {
+	var bahan = $('#bahan').val();
+	var jumlah = $('#jumlah').val();
+	var total = 0;
+	var html = '';
+	if (bahan === 'hvs'){
+		total = jumlah * 500000;
+		html = '' +
+			'<h3> Rp. '+formatRupiah(total.toString())+'</h3>';
+		$('#total').html(html);
+	}  else if (bahan === 'konstruk'){
+		total = jumlah * 750000;
+		html = '' +
+			'<h3> Rp. '+formatRupiah(total.toString())+'</h3>';
+		$('#total').html(html);
+	}
+}
+
 // ------------------------------------------------------------------------------------------
 // Fungsi-fungsi
 // ------------------------------------------------------------------------------------------

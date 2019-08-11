@@ -275,6 +275,82 @@ class PesanController extends CI_Controller
 		$this->load->view('frontend/templates/footer');
 	}
 	public function pesanBrosur(){
+		if (isset($_POST['keranjang'])) {
+			$brosurId = 'BRC-' . substr(time(), 5);
+			$ukuran = $this->input->post('ukuran');
+			$bahan = $this->input->post('bahan');
+			$jumlah = $this->input->post('jumlah');
+			$estimasi = $this->input->post('estimasi');
+			$total = 0;
+			if ($bahan == 'hvs') {
+				$total =  $jumlah * 500000;
+			} elseif ($bahan == 'konstruk') {
+				$total =  $jumlah * 750000;
+			}
+
+			$config['upload_path'] = './assets/images/brosur/';
+			$config['allowed_types'] = 'jpg|png|jpeg';
+			$this->load->library('upload', $config);
+			$this->upload->initialize($config);
+
+			if (!$this->upload->do_upload('upload')) {
+				$error = array('error' => $this->upload->display_errors());
+				var_dump($error);
+			} else {
+				$foto = $this->upload->data('file_name');
+
+				$dataBrosur = array(
+					'brosur_id' => $brosurId,
+					'brosur_bahan' => $bahan,
+					'brosur_ukuran' => $ukuran,
+					'brosur_jumlah' => $jumlah,
+					'brosur_estimasi' => $estimasi,
+					'brosur_total' => $total,
+					'brosur_foto' => $foto,
+				);
+
+				$allCart = $this->BayarModel->lihat_keranjang();
+				$undoneCart = $this->BayarModel->lihat_keranjang_status($this->session->userdata('session_id'),'belum')->row_array();
+
+				if ($allCart == null){
+					$cartId = 'CRT-' . substr(time(), 5);
+					$dataBrosur['brosur_keranjang_id'] = $cartId;
+					$dataCart = array(
+						'keranjang_id' => $cartId,
+						'keranjang_pengguna_id' => $this->session->userdata('session_id'),
+						'keranjang_total' => $total,
+					);
+					$this->PesanModel->simpan_brosur($dataBrosur);
+					$this->BayarModel->simpan_keranjang($dataCart);
+					$this->session->set_flashdata('alert', 'pesan_sukses');
+					redirect('brosur');
+				} else {
+					if ($undoneCart != null){
+						$cartId = $undoneCart['keranjang_id'];
+						$cartTotal = $undoneCart['keranjang_total'];
+						$dataBrosur['brosur_keranjang_id'] = $cartId;
+						$dataCart['keranjang_total'] = $cartTotal + $total;
+
+						$this->PesanModel->simpan_brosur($dataBrosur);
+						$this->BayarModel->update_keranjang($cartId,$dataCart);
+						$this->session->set_flashdata('alert', 'pesan_sukses');
+						redirect('brosur');
+					} else {
+						$cartId = 'CRT-' . substr(time(), 5);
+						$dataBrosur['brosur_keranjang_id'] = $cartId;
+						$dataCart = array(
+							'keranjang_id' => $cartId,
+							'keranjang_pengguna_id' => $this->session->userdata('session_id'),
+							'keranjang_total' => $total,
+						);
+						$this->PesanModel->simpan_brosur($dataBrosur);
+						$this->BayarModel->simpan_keranjang($dataCart);
+						$this->session->set_flashdata('alert', 'pesan_sukses');
+						redirect('brosur');
+					}
+				}
+			}
+		}
 		$data = array(
 			'title' => 'Pesan Brosur | Surya Madani Digital Printing'
 		);
