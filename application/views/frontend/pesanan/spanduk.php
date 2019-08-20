@@ -36,11 +36,11 @@
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<input type="number" class="form-control" id="panjang" name="panjang"
+									<input type="text" class="form-control" id="panjang" name="panjang"
 										   placeholder="Panjang" required autocomplete="off">
 								</div>
 								<div class="col-md-6">
-									<input type="number" class="form-control" id="lebar" name="lebar"
+									<input type="text" class="form-control" id="lebar" name="lebar"
 										   placeholder="Lebar" required autocomplete="off">
 								</div>
 							</div>

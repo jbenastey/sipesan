@@ -54,11 +54,17 @@ $route['default_controller'] = 'HomeController';
 
 $route['login'] = 'AuthController/login';
 $route['logout'] = 'AuthController/logout';
+$route['register'] = 'AuthController/register';
 
 $route['spanduk'] = 'PesanController/pesanSpanduk';
 $route['stiker'] = 'PesanController/pesanStiker';
 $route['kartu'] = 'PesanController/pesanKartu';
 $route['brosur'] = 'PesanController/pesanBrosur';
+
+$route['hapus/spanduk/(:any)'] = 'PesanController/hapusSpanduk/$1';
+$route['hapus/stiker/(:any)'] = 'PesanController/hapusStiker/$1';
+$route['hapus/kartu/(:any)'] = 'PesanController/hapusKartu/$1';
+$route['hapus/brosur/(:any)'] = 'PesanController/hapusBrosur/$1';
 
 $route['keranjang'] = 'BayarController/keranjang';
 $route['bayar/(:any)'] = 'BayarController/bayar/$1';

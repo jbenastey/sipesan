@@ -358,4 +358,60 @@ class PesanController extends CI_Controller
 		$this->load->view('frontend/pesanan/brosur');
 		$this->load->view('frontend/templates/footer');
 	}
+
+	public function hapusKartu($id){
+		$kartu = $this->PesanModel->lihat_kartu_by_id($id);
+		$keranjang_id = $kartu['kartu_keranjang_id'];
+		$keranjang = $this->BayarModel->lihat_keranjang_by_id($keranjang_id);
+		$total = $kartu['kartu_total'];
+		$data = array(
+			'keranjang_total' => $keranjang['keranjang_total'] - $total
+		);
+		$this->PesanModel->delete('kartu_id',$id,'sipesan_kartu');
+		$this->BayarModel->update_keranjang($keranjang_id,$data);
+		$this->session->set_flashdata('alert', 'pesan_hapus');
+		redirect('keranjang');
+	}
+
+	public function hapusSpanduk($id){
+		$spanduk = $this->PesanModel->lihat_spanduk_by_id($id);
+		$keranjang_id = $spanduk['spanduk_keranjang_id'];
+		$keranjang = $this->BayarModel->lihat_keranjang_by_id($keranjang_id);
+		$total = $spanduk['spanduk_total'];
+		$data = array(
+			'keranjang_total' => $keranjang['keranjang_total'] - $total
+		);
+		$this->PesanModel->delete('spanduk_id',$id,'sipesan_spanduk');
+		$this->BayarModel->update_keranjang($keranjang_id,$data);
+		$this->session->set_flashdata('alert', 'pesan_hapus');
+		redirect('keranjang');
+	}
+
+	public function hapusStiker($id){
+		$stiker = $this->PesanModel->lihat_stiker_by_id($id);
+		$keranjang_id = $stiker['stiker_keranjang_id'];
+		$keranjang = $this->BayarModel->lihat_keranjang_by_id($keranjang_id);
+		$total = $stiker['stiker_total'];
+		$data = array(
+			'keranjang_total' => $keranjang['keranjang_total'] - $total
+		);
+		$this->PesanModel->delete('stiker_id',$id,'sipesan_stiker');
+		$this->BayarModel->update_keranjang($keranjang_id,$data);
+		$this->session->set_flashdata('alert', 'pesan_hapus');
+		redirect('keranjang');
+	}
+
+	public function hapusBrosur($id){
+		$brosur = $this->PesanModel->lihat_brosur_by_id($id);
+		$keranjang_id = $brosur['brosur_keranjang_id'];
+		$keranjang = $this->BayarModel->lihat_keranjang_by_id($keranjang_id);
+		$total = $brosur['brosur_total'];
+		$data = array(
+			'keranjang_total' => $keranjang['keranjang_total'] - $total
+		);
+		$this->PesanModel->delete('brosur_id',$id,'sipesan_brosur');
+		$this->BayarModel->update_keranjang($keranjang_id,$data);
+		$this->session->set_flashdata('alert', 'pesan_hapus');
+		redirect('keranjang');
+	}
 }

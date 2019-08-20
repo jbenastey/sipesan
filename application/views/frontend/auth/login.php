@@ -37,8 +37,12 @@
 								<input class="form-control" type="password" required name="password" autocomplete="off"/>
 							</div>
 							<div class="form-group">
-								<label>Repeat Password</label>
-								<input class="form-control" type="password" required name="password" autocomplete="off"/>
+								<label>Nama</label>
+								<input class="form-control" type="text" required name="nama" autocomplete="off"/>
+							</div>
+							<div class="form-group">
+								<label>Nomor HP</label>
+								<input class="form-control" type="number" required name="no_hp" autocomplete="off"/>
 							</div>
 							<input class="btn btn-primary" type="submit" value="Buat Akun" name="register"/>
 						<?=form_close()?>

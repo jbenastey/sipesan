@@ -41,4 +41,8 @@ class PesanModel extends CI_Model
 		$this->db->where('brosur_id',$id);
 		return $this->db->get('sipesan_brosur')->row_array();
 	}
+	public function delete($key,$id,$table){
+		$this->db->where($key,$id);
+		return $this->db->delete($table);
+	}
 }

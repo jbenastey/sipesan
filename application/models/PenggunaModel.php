@@ -20,4 +20,9 @@ class PenggunaModel extends CI_Model{
 		$query = $this->db->get();
 		return $query->result_array();
 	}
+
+	public function register($data){
+		$this->db->insert('sipesan_pengguna',$data);
+		return $this->db->affected_rows();
+	}
 }

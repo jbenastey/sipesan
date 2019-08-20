@@ -201,8 +201,12 @@
 			<input class="form-control" type="password" required name="password" autocomplete="off"/>
 		</div>
 		<div class="form-group">
-			<label>Repeat Password</label>
-			<input class="form-control" type="password" required name="password" autocomplete="off"/>
+			<label>Nama</label>
+			<input class="form-control" type="text" required name="nama" autocomplete="off"/>
+		</div>
+		<div class="form-group">
+			<label>Nomor HP</label>
+			<input class="form-control" type="number" required name="no_hp" autocomplete="off"/>
 		</div>
 		<input class="btn btn-primary" type="submit" value="Buat Akun" name="register"/>
 		<?= form_close() ?>
@@ -304,6 +308,11 @@
 			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
 			<i class="fa fa-check"></i> Berhasil Login
 		</div>
+		<?php elseif ($this->session->flashdata('alert') == 'success_register') : ?>
+		<div class="alert-success animated fadeInDownBig hide-it">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			<i class="fa fa-check"></i> Berhasil Register, Silahkan Login
+		</div>
 		<?php elseif ($this->session->flashdata('alert') == 'login_gagal') : ?>
 		<div class="alert-danger animated fadeInDownBig hide-it">
 			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -333,6 +342,11 @@
 		<div class="alert-success animated fadeInDownBig hide-it">
 			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
 			<i class="fa fa-check"></i> Berhasil Melakukan Pemesanan
+		</div>
+		<?php elseif ($this->session->flashdata('alert') == 'pesan_hapus') : ?>
+		<div class="alert-success animated fadeInDownBig hide-it">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			<i class="fa fa-check"></i> Berhasil Menghapus Pesanan
 		</div>
 		<?php endif;?>
 	</div>
