@@ -85,6 +85,7 @@ $route['admin/pelanggan'] = 'backend/PelangganController';
 $route['admin/transaksi'] = 'backend/TransaksiController';
 $route['admin/transaksi/lihat/(:any)'] = 'backend/TransaksiController/lihat/$1';
 $route['admin/transaksi/konfirmasi/(:any)'] = 'backend/TransaksiController/konfirmasi/$1';
+$route['admin/transaksi/email/(:any)'] = 'backend/TransaksiController/email/$1';
 
 $route['admin/pesanan'] = 'backend/PesananController';
 $route['admin/pesanan/lihat/(:any)'] = 'backend/PesananController/lihat/$1';

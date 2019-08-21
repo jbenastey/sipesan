@@ -19,6 +19,7 @@
 								<label class="badge badge-warning">Belum bayar</label>
 							<?php elseif ($transaksi['faktur_status'] == 'sudah'): ?>
 								<label class="badge badge-success">Selesai</label>
+								<a href="<?=base_url('admin/transaksi/email/'.$transaksi['faktur_id'])?>" class="badge badge-primary">Kirim Notifikasi</a>
 							<?php elseif ($transaksi['faktur_status'] == 'tunggu'): ?>
 								<label class="badge badge-primary">Menunggu</label>
 							<?php endif; ?>

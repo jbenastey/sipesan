@@ -66,7 +66,7 @@ class BayarController extends CI_Controller{
 		);
 		$data = array(
 			'bank' => $dataBank[$bank],
-			'pesanan' => $this->BayarModel->lihat_keranjang_status_selesai($this->session->userdata('session_id'),'sudah',$id)->row_array(),
+			'pesanan' => $this->BayarModel->lihat_keranjang_status_selesai($this->session->userdata('session_id'),'bayar_menunggu',$id)->row_array(),
 			'title' => 'Terima Kasih | Surya Madani Digital Printing'
 		);
 		$this->load->view('frontend/templates/header',$data);
