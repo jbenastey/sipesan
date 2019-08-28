@@ -1,37 +1,17 @@
-<div class="col-12">
-	<div class="card">
-		<div class="card-body">
-			<h3 class="card-title">
-				Detail Pesanan
-			</h3>
-			<div>
-				<table>
-					<tr>
-						<td>Nama Pemesan</td>
-						<td> :</td>
-						<td>&nbsp;
-							<?= $transaksi['pengguna_nama'] ?>
-						</td>
-					</tr>
-					<tr>
-						<td>Nomor HP</td>
-						<td> :</td>
-						<td>&nbsp;
-							<?= $transaksi['pengguna_nomor_hp'] ?>
-						</td>
-					</tr>
-					<tr>
-						<td>Waktu Pemesanan</td>
-						<td> :</td>
-						<td>&nbsp;
-							<?php
-							$tanggal = explode(" ", $transaksi['faktur_date_created']);
-							echo $tanggal[1] . ', ' . date_indo($tanggal[0]);
-							?>
-						</td>
-					</tr>
-				</table>
-				<hr>
+<div class="gap"></div>
+<div class="container">
+	<div class="row row-col-gap" data-gutter="60">
+		<div class="col-md-3">
+			<h3 class="widget-title"><?= $this->session->userdata('session_username');?></h3>
+			<div class="box">
+				<a href="<?=base_url('profil')?>" class="btn btn-default btn-block" style="text-align: left"><i class="fa fa-user-circle"></i> Profil</a>
+				<a href="<?=base_url('pesanan')?>" class="btn btn-primary btn-block" style="text-align: left"><i class="fa fa-list"></i> Data Pemesanan</a>
+				<a href="<?=base_url('logout')?>" onclick="return confirm('Logout? ')"  class="btn btn-default btn-block" style="text-align: left"><i class="fa fa-sign-out"></i> Logout</a>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<h3 class="widget-title"><i class="fa fa-list"></i> Data Desain</h3>
+			<div class="box">
 				<?php
 				if ($spanduk == !null):
 					?>
@@ -57,8 +37,8 @@
 								<td><?= $value['spanduk_bahan'] ?></td>
 								<td><?= $value['spanduk_jumlah'] ?></td>
 								<td>
-									<a href="<?= base_url('admin/pesanan/foto/' . $value['spanduk_id']) ?>"
-									   class="badge badge-primary"><i class="fa fa-eye"></i> Lihat</a>
+									<a href="<?= base_url('detail-desain/' . $value['spanduk_id']) ?>"
+									   class="label label-primary"><i class="fa fa-eye"></i> Lihat</a>
 								</td>
 							</tr>
 							<?php
@@ -96,8 +76,8 @@
 								<td><?= $value['stiker_bahan'] ?></td>
 								<td><?= $value['stiker_jumlah'] ?></td>
 								<td>
-									<a href="<?= base_url('admin/pesanan/foto/' . $value['stiker_id']) ?>"
-									   class="badge badge-primary"><i class="fa fa-eye"></i> Lihat</a>
+									<a href="<?= base_url('detail-desain/' . $value['stiker_id']) ?>"
+									   class="label label-primary"><i class="fa fa-eye"></i> Lihat</a>
 								</td>
 							</tr>
 							<?php
@@ -133,8 +113,8 @@
 								<td><?= $value['kartu_bahan'] ?></td>
 								<td><?= $value['kartu_jumlah'] ?></td>
 								<td>
-									<a href="<?= base_url('admin/pesanan/foto/' . $value['kartu_id']) ?>"
-									   class="badge badge-primary"><i class="fa fa-eye"></i> Lihat</a>
+									<a href="<?= base_url('detail-desain/' . $value['kartu_id']) ?>"
+									   class="label label-primary"><i class="fa fa-eye"></i> Lihat</a>
 								</td>
 							</tr>
 							<?php
@@ -172,8 +152,8 @@
 								<td><?= $value['brosur_bahan'] ?></td>
 								<td><?= $value['brosur_jumlah'] ?></td>
 								<td>
-									<a href="<?= base_url('admin/pesanan/foto/' . $value['brosur_id']) ?>"
-									   class="badge badge-primary"><i class="fa fa-eye"></i> Lihat</a>
+									<a href="<?= base_url('detail-desain/' . $value['brosur_id']) ?>"
+									   class="label label-primary"><i class="fa fa-eye"></i> Lihat</a>
 								</td>
 							</tr>
 							<?php

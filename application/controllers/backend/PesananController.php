@@ -53,4 +53,46 @@ class PesananController extends CI_Controller
 		$this->load->view('backend/pesanan/foto',$data);
 		$this->load->view('backend/templates/footer');
 	}
+	public function desain($id){
+		if (isset($_POST['desain'])){
+			$desainId = 'DSN-' . substr(time(), 5);
+
+			$config['upload_path'] = './assets/images/desain/';
+			$config['allowed_types'] = 'jpg|png|jpeg';
+			$this->load->library('upload', $config);
+			$this->upload->initialize($config);
+
+			if (!$this->upload->do_upload('foto')) {
+				$error = array('error' => $this->upload->display_errors());
+				var_dump($error);
+			} else {
+				$desain = $this->upload->data('file_name');
+
+				$data = array(
+					'desain_id' => $desainId,
+					'desain_produk_id' => $id,
+					'desain_foto' => $desain,
+					'desain_status' => 'belum',
+				);
+
+				$this->PesanModel->simpan('sipesan_desain',$data);
+				redirect('admin/pesanan/desain/'.$id);
+			}
+		} else {
+			$data = array(
+				'produk' => $this->PesanModel->lihat_desain('sipesan_desain','desain_produk_id',$id),
+				'id' => $id
+			);
+			$this->load->view('backend/templates/header');
+			$this->load->view('backend/pesanan/desain',$data);
+			$this->load->view('backend/templates/footer');
+		}
+	}
+	public function selesai($id){
+		$data = array(
+			'desain_status' => 'selesai'
+		);
+		$this->PesanModel->update('sipesan_desain','desain_produk_id',$id,$data);
+		redirect('admin/pesanan/desain/'.$id);
+	}
 }

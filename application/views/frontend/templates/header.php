@@ -348,6 +348,11 @@
 			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
 			<i class="fa fa-check"></i> Berhasil Menghapus Pesanan
 		</div>
+		<?php elseif ($this->session->flashdata('alert') == 'komentar_sukses') : ?>
+		<div class="alert-success animated fadeInDownBig hide-it">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			<i class="fa fa-check"></i> Berhasil Menambahkan Komentar
+		</div>
 		<?php endif;?>
 	</div>
 

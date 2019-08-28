@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="<?=base_url()?>assets/backend/node_modules/font-awesome/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="<?=base_url()?>assets/backend/node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css">
 	<link rel="stylesheet" href="<?=base_url()?>assets/backend/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css">
+	<link rel="stylesheet" href="<?=base_url()?>assets/backend/node_modules/dropify/dist/css/dropify.min.css">
 	<!-- End plugin css for this page -->
 	<!-- inject:css -->
 	<link rel="stylesheet" href="<?=base_url()?>assets/backend/css/style.css">

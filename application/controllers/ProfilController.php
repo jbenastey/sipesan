@@ -7,7 +7,7 @@ class ProfilController extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$model = array('BayarModel');
+		$model = array('BayarModel','PesanModel');
 		$helper = array('nominal','tgl_indo');
 		$this->load->model($model);
 		$this->load->helper($helper);
@@ -46,5 +46,40 @@ class ProfilController extends CI_Controller
 		$this->load->view('frontend/templates/header',$data);
 		$this->load->view('frontend/profil/detail_pesanan',$data);
 		$this->load->view('frontend/templates/footer');
+	}
+	public function desain($id){
+		$pesanan = $this->BayarModel->lihat_keranjang_faktur_by_id($id,$this->session->userdata('session_id'))->row_array();
+		$data = array(
+			'title' => 'Data Desain | Surya Madani Digital Printing',
+			'spanduk' => $this->BayarModel->lihat_keranjang_spanduk($this->session->userdata('session_id'),'bayar_menunggu',$pesanan['keranjang_id'])->result_array(),
+			'stiker' => $this->BayarModel->lihat_keranjang_stiker($this->session->userdata('session_id'),'bayar_menunggu',$pesanan['keranjang_id'])->result_array(),
+			'kartu' => $this->BayarModel->lihat_keranjang_kartu($this->session->userdata('session_id'),'bayar_menunggu',$pesanan['keranjang_id'])->result_array(),
+			'brosur' => $this->BayarModel->lihat_keranjang_brosur($this->session->userdata('session_id'),'bayar_menunggu',$pesanan['keranjang_id'])->result_array(),
+		);
+		$this->load->view('frontend/templates/header',$data);
+		$this->load->view('frontend/profil/desain',$data);
+		$this->load->view('frontend/templates/footer');
+	}
+	public function detailDesain($id){
+		if (isset($_POST['desain'])){
+			$desainId = $this->input->post('id');
+			$komentar = $this->input->post('komentar');
+			$data = array(
+				'desain_komentar' => $komentar,
+				'desain_status' => 'tunggu'
+			);
+			$this->PesanModel->update('sipesan_desain','desain_id',$desainId,$data);
+			$this->session->set_flashdata('alert', 'komentar_sukses');
+			redirect('pesanan');
+		} else {
+			$data = array(
+				'title' => 'Detail Desain | Surya Madani Digital Printing',
+				'produk' => $this->PesanModel->lihat_desain('sipesan_desain','desain_produk_id',$id),
+				'id' => $id
+			);
+			$this->load->view('frontend/templates/header',$data);
+			$this->load->view('frontend/profil/detail_desain',$data);
+			$this->load->view('frontend/templates/footer');
+		}
 	}
 }

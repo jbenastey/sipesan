@@ -39,6 +39,9 @@
 <script src="<?= base_url('assets/backend/node_modules/datatables.net/js/jquery.dataTables.js')?>"></script>
 <script src="<?= base_url('assets/backend/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js')?>"></script>
 <script src="<?= base_url('assets/backend/js/data-table.js')?>"></script>
+<script src="<?=base_url()?>assets/backend/node_modules/dropify/dist/js/dropify.min.js"></script>
+
+<script src="<?=base_url()?>assets/backend/js/dropify.js"></script>
 <!-- Custom js for this page-->
 <script src="<?=base_url()?>assets/backend/js/dashboard.js"></script>
 <script src="<?=base_url()?>assets/backend/js/dashboard.js"></script>

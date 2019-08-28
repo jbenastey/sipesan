@@ -73,6 +73,8 @@ $route['konfirmasi/(:any)'] = 'BayarController/konfirmasi/$1';
 
 $route['profil'] = 'ProfilController';
 $route['pesanan'] = 'ProfilController/pesanan';
+$route['desain/(:any)'] = 'ProfilController/desain/$1';
+$route['detail-desain/(:any)'] = 'ProfilController/detailDesain/$1';
 $route['detail-pesanan/(:any)'] = 'ProfilController/detailPesanan/$1';
 
 
@@ -90,6 +92,8 @@ $route['admin/transaksi/email/(:any)'] = 'backend/TransaksiController/email/$1';
 $route['admin/pesanan'] = 'backend/PesananController';
 $route['admin/pesanan/lihat/(:any)'] = 'backend/PesananController/lihat/$1';
 $route['admin/pesanan/foto/(:any)'] = 'backend/PesananController/foto/$1';
+$route['admin/pesanan/desain/(:any)'] = 'backend/PesananController/desain/$1';
+$route['admin/pesanan/selesai/(:any)'] = 'backend/PesananController/selesai/$1';
 
 $route['admin/laporan/(:any)'] = 'backend/LaporanController/index/$1';
 

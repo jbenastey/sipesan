@@ -45,4 +45,17 @@ class PesanModel extends CI_Model
 		$this->db->where($key,$id);
 		return $this->db->delete($table);
 	}
+	public function lihat_desain($table,$key,$id){
+		$this->db->where($key,$id);
+		return $this->db->get($table)->row_array();
+	}
+	public function simpan($table,$data){
+		$this->db->insert($table,$data);
+		return $this->db->affected_rows();
+	}
+	public function update($table,$key,$id,$data){
+		$this->db->where($key, $id);
+		$this->db->update($table,$data);
+		return $this->db->affected_rows();
+	}
 }

@@ -192,6 +192,9 @@
 						</tfoot>
 					</table>
 				</div>
+				<?php if ($pesanan['faktur_status'] == 'sudah'): ?>
+				<a href="<?=base_url('desain/'.$pesanan['faktur_id'])?>" class="label label-primary">Lihat hasil desain</a>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
