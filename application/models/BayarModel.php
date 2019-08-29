@@ -72,6 +72,7 @@ class BayarModel extends CI_Model
 		$this->db->join('sipesan_pengguna', 'sipesan_pengguna.pengguna_id = sipesan_keranjang.keranjang_pengguna_id');
 		$this->db->like('faktur_date_created',$tanggal);
 		$this->db->where('keranjang_status', $status);
+		$this->db->where('faktur_status', 'sudah');
 		return $this->db->get();
 	}
 	public function lihat_keranjang_stiker_admin($status,$tanggal){
@@ -81,6 +82,7 @@ class BayarModel extends CI_Model
 		$this->db->join('sipesan_pengguna', 'sipesan_pengguna.pengguna_id = sipesan_keranjang.keranjang_pengguna_id');
 		$this->db->like('faktur_date_created',$tanggal);
 		$this->db->where('keranjang_status', $status);
+		$this->db->where('faktur_status', 'sudah');
 		return $this->db->get();
 	}
 	public function lihat_keranjang_kartu_admin($status,$tanggal){
@@ -90,6 +92,7 @@ class BayarModel extends CI_Model
 		$this->db->join('sipesan_pengguna', 'sipesan_pengguna.pengguna_id = sipesan_keranjang.keranjang_pengguna_id');
 		$this->db->like('faktur_date_created',$tanggal);
 		$this->db->where('keranjang_status', $status);
+		$this->db->where('faktur_status', 'sudah');
 		return $this->db->get();
 	}
 	public function lihat_keranjang_brosur_admin($status,$tanggal){
@@ -99,6 +102,7 @@ class BayarModel extends CI_Model
 		$this->db->join('sipesan_pengguna', 'sipesan_pengguna.pengguna_id = sipesan_keranjang.keranjang_pengguna_id');
 		$this->db->like('faktur_date_created',$tanggal);
 		$this->db->where('keranjang_status', $status);
+		$this->db->where('faktur_status', 'sudah');
 		return $this->db->get();
 	}
 	public function lihat_keranjang_faktur($pengguna_id){

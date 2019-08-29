@@ -8,8 +8,8 @@
 		<div class="card-body">
 			<div class="row d-print-none">
 				<div class="col-6">
-					<a href="<?= base_url('admin') ?>" class="btn btn-sm btn-outline-primary"><i
-							class="fa fa-arrow-left"></i></a>
+					<button type="button" onclick="return window.history.back();" class="btn btn-sm btn-outline-primary"><i
+							class="fa fa-arrow-left"></i></button>
 				</div>
 				<div class="col-6">
 					<button style="float: right" type="button" onclick="window.print()"
@@ -25,7 +25,13 @@
 						} else {
 							echo 'Kartu Nama';
 						}
-						?> Tanggal <?= date_indo($tanggal) ?></h4></div>
+						?>  <?php
+						if ($tanggal != null){
+							echo 'Tanggal '.date_indo($tanggal);
+						} else {
+							echo 'Bulan '.bulan($bulan) .' '. date('Y');
+						}
+						?></h4></div>
 				<table class="table table-bordered">
 					<?php
 					if ($tipe == 'spanduk'):

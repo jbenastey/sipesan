@@ -36,7 +36,31 @@ class LaporanController extends CI_Controller
 			$this->load->view('backend/templates/header');
 			$this->load->view('backend/laporan/lihat',$data);
 			$this->load->view('backend/templates/footer');
-		} else {
+		} elseif(isset($_POST['lihatBulan'])){
+			$tahun = date('Y');
+			$bulan = $this->input->post('bulan');
+			$tanggal = $tahun.'-'.$bulan;
+			$tipenya = array(
+				'spanduk' => $this->BayarModel->lihat_keranjang_spanduk_admin('bayar_menunggu',$tanggal)->result_array(),
+				'stiker' => $this->BayarModel->lihat_keranjang_stiker_admin('bayar_menunggu',$tanggal)->result_array(),
+				'kartu' => $this->BayarModel->lihat_keranjang_kartu_admin('bayar_menunggu',$tanggal)->result_array(),
+				'brosur' => $this->BayarModel->lihat_keranjang_brosur_admin('bayar_menunggu',$tanggal)->result_array()
+			);
+
+			$data = array(
+				'spanduk' => $tipenya[$tipe],
+				'stiker' => $tipenya[$tipe],
+				'kartu' => $tipenya[$tipe],
+				'brosur' => $tipenya[$tipe],
+				'tanggal' => null,
+				'bulan' => $bulan,
+				'tipe' => $tipe
+			);
+			$this->load->view('backend/templates/header');
+			$this->load->view('backend/laporan/lihat',$data);
+			$this->load->view('backend/templates/footer');
+		}
+		else {
 			$data = array(
 				'tipe' => $tipe
 			);
